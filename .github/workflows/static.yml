@@ -38,7 +38,6 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-          publish_dir: docs/_gitsite
       - name: Send to GH Page Branch
         id: deployment
         uses: actions/deploy-pages@v2
