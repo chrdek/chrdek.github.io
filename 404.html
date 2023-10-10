@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Not Found</title>
     <link href="./styles/404.css" rel="stylesheet" />
-    <script type="text/javascript">
-      function BackToPrevious() {
-       window.history.back();
-    }
-   </script>
 </head>
 <body>
     <canvas id="canvas"></canvas>
@@ -18,7 +13,11 @@
         <p>Poof! The page you are looking for has turned to confetti.</p>
         <p><a href="#" onclick="BackToPrevious()">go to previous</a> or <a href="/">move to main</a>.</p>
     </div>
-
+    <script type="text/javascript">
+      function BackToPrevious() {
+       window.history.back();
+    }
+   </script>
     <script type="text/javascript">
         // Animated background with canvas
         const canvas = document.getElementById('canvas');
