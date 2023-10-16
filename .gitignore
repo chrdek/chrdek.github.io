@@ -3,6 +3,8 @@
 **/test[s]/
 **/test[ing]/
 **/.vs/
+**/temp
+**/[.]cache[d]
 **/custom/
 **/htm[l]/
 **/./
