@@ -7,3 +7,7 @@
 **/htm[l]/
 **/./
 **/*.md
+**/npm/*.*
+**/node_modules/*.*
+**/packages/*.*
+**/modules/*.*
