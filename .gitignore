@@ -7,6 +7,11 @@
 *.p12
 *.pfx
 *.pgp
+package.json
+.env
+.env*
+**/.env*
+**/*.yml
 **/js/
 **/javascript/
 **/test[s]/
