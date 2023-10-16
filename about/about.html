@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test page (about)</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ff9900;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 8em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 0.5em;
+        }
+
+        .ghost {
+            width: 100px;
+            height: 100px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            position: relative;
+            animation: float 2s infinite alternate;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ghost"></div>
+    <h1>About Page</h1>
+    <p>This is about the things that will follow.</p>
+    <p>Main page 1 -> 2 etc.</p>
+</body>
+</html>
