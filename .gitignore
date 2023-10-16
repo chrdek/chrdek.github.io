@@ -1,0 +1,9 @@
+**/js/
+**/javascript/
+**/test[s]/
+**/test[ing]/
+**/.vs/
+**/custom/
+**/htm[l]/
+**/./
+**/*.md
