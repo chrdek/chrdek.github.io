@@ -7,20 +7,23 @@
     <link href="./styles/404.css" rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
    <script>
+$(document).ready(function(){
 
-var reqSetup = {
-    url:`https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0`,
-    crossDomain:true,
-    cache: false,
-    timeout:100000,
-    spinner:true,
-};
+const xhr = new XMLHttpRequest();
+const url = 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0';
 
-$.get('https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0').then( (xml_feed) => {
-  let Nugetxml = $.parseXML(xml_feed);
+xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+  let Nugetxml = $.parseXML(this.responseText);
   console.log("Logged Info Temp:");
   console.log(Nugetxml);
-  });
+            }
+         };
+         xhttp.withCredentials = false;
+xhr.open("GET", url);
+//xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencode');
+xhr.send();
+});
    </script>
 </head>
 <body>
