@@ -16,7 +16,7 @@ var reqSetup = {
     spinner:true,
 };
 
-$.get('').then( (jsondata) => {
+$.get(reqSetup).then( (xml_feed) => {
   let Nugetxml = $.parseXML(xml_feed);
   console.log("Logged Info Temp:");
   console.log(Nugetxml);
