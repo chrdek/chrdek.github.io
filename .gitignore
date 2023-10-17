@@ -8,8 +8,17 @@
 *.pfx
 *.pgp
 package.json
+.htaccess
+*.htaccess
+*.db
+*.log
+*.xml
+*.xslt
 .env
 .env*
+**/*/*.log
+**/*/*.xml
+**/*/*.xslt
 **/.env*
 **/*.yml
 **/js/
