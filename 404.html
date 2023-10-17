@@ -7,6 +7,7 @@
     <link href="./styles/404.css" rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
    <script>
+/*
 $(document).ready(function(){
 
 const xhr = new XMLHttpRequest();
@@ -26,7 +27,18 @@ xhr.setRequestHeader("Content-Type", "text/xml");
 xhr.setRequestHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7");
 xhr.setRequestHeader("Accept-Encoding","gzip, deflate, br");
 xhr.send();
-});
+});*/
+
+function reqListener (response) {
+    console.log(response);
+}
+
+const url = 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0';
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", url);
+oReq.send();
+
    </script>
 </head>
 <body>
