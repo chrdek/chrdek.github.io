@@ -19,9 +19,9 @@ xhr.onreadystatechange = function() {
   console.log(Nugetxml);
             }
          };
-         xhttp.withCredentials = false;
+         xhr.withCredentials = false;
 xhr.open("GET", url);
-//xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencode');
+//xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencode');
 xhr.send();
 });
    </script>
