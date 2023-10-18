@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main index site</title>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
-var reqSetup = {
-    url:`https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0`,
-    crossDomain:true,
-    cache: false,
-    timeout:100000,
-    spinner:true,
-};
-$.get(reqSetup).then((xml_data) => {
-let xmlResp = $.parseXML(xml_data);
-let atom_feed_title = xmlResp.documentElement.firstElementChild.innerHTML;
-console.log("== XML RESPONSE TITLE/BODY: ==");
-console.log(atom_feed_title);
-console.log(xmlResp);
-});
+function reqListener (response) {
+    console.log(response);
+}
+
+const url = 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0';
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = false;
+xhr.setRequestHeader("Access-Control-Allow-Origin","*");
+xhr.setRequestHeader("Content-Type", "text/xml");
+xhr.addEventListener("load", reqListener);
+xhr.open("GET", url);
+xhr.send();
 
 </script>
     <style>
