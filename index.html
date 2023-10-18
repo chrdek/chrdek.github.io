@@ -9,16 +9,16 @@ function reqListener (response) {
     console.log(response);
 }
 
-const url = 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0';
+const url = 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm='owner:chrkqedek'&targetFramework=''&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0';
 var xhr = new XMLHttpRequest();
 xhr.withCredentials = false;
 
 xhr.addEventListener("load", reqListener);
 xhr.open("GET", url);
 
-xhr.setRequestHeader("Access-Control-Allow-Origin","https://chrdek.github.io");
+xhr.setRequestHeader("Access-Control-Allow-Origin","*"); //52.240.159.111
 xhr.setRequestHeader("Access-Control-Allow-Methods","POST, GET, OPTIONS, PUT, DELETE, HEAD");
-//xhr.setRequestHeader("Content-Type", "text/xml");
+xhr.setRequestHeader("Content-Type", "text/xml");
 //xhr.setRequestHeader("Content-Type", "application/json");
 xhr.send();
 
