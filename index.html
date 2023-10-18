@@ -12,10 +12,12 @@ function reqListener (response) {
 const url = 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0';
 var xhr = new XMLHttpRequest();
 xhr.withCredentials = false;
-xhr.setRequestHeader("Access-Control-Allow-Origin","*");
-xhr.setRequestHeader("Content-Type", "text/xml");
+
 xhr.addEventListener("load", reqListener);
 xhr.open("GET", url);
+
+xhr.setRequestHeader("Access-Control-Allow-Origin","*");
+xhr.setRequestHeader("Content-Type", "text/xml");
 xhr.send();
 
 </script>
