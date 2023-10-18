@@ -24,9 +24,9 @@ xhr.withCredentials = false;
 xhr.addEventListener("load", reqListener);
 xhr.open("GET", url);
 
-//xhr.setRequestHeader("Access-Control-Allow-Origin","*");
-/*xhr.setRequestHeader("Access-Control-Allow-Headers","*");
-xhr.setRequestHeader("Access-Control-Allow-Methods","POST, GET, OPTIONS, PUT, DELETE, HEAD");
+xhr.setRequestHeader("Access-Control-Allow-Origin","*");
+xhr.setRequestHeader("Access-Control-Allow-Headers","*");
+/*xhr.setRequestHeader("Access-Control-Allow-Methods","POST, GET, OPTIONS, PUT, DELETE, HEAD");
 xhr.setRequestHeader("Content-Type", "text/xml");
 xhr.setRequestHeader("Content-Encoding","gzip, deflate, br");*/
 //xhr.setRequestHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7");
