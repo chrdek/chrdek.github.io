@@ -14,7 +14,7 @@ var xhr = new XMLHttpRequest();
 xhr.withCredentials = false;
 
 xhr.addEventListener("load", reqListener);
-xhr.open("GET", url);
+xhr.open("GET", encodeURIComponent(url));
 
 xhr.setRequestHeader("Access-Control-Allow-Origin","*"); //52.240.159.111
 xhr.setRequestHeader("Access-Control-Allow-Methods","POST, GET, OPTIONS, PUT, DELETE, HEAD");
