@@ -16,10 +16,10 @@ xhr.withCredentials = false;
 xhr.addEventListener("load", reqListener);
 xhr.open("GET", url);
 
-xhr.setRequestHeader("Access-Control-Allow-Origin","https://chrdek.github.io/");
+xhr.setRequestHeader("Access-Control-Allow-Origin","https://chrdek.github.io");
 xhr.setRequestHeader("Access-Control-Allow-Methods","POST, GET, OPTIONS, PUT, DELETE, HEAD");
-xhr.setRequestHeader("Content-Type", "text/xml");
-xhr.setRequestHeader("Content-Type", "application/json");
+//xhr.setRequestHeader("Content-Type", "text/xml");
+//xhr.setRequestHeader("Content-Type", "application/json");
 xhr.send();
 
 </script>
