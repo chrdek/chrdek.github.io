@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main index site</title>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
 function reqListener (response) {
-    console.log(response);
+
+console.log("----Content retrieved from Endpoint, pending parsing:-----");
+ var resp_feed = $.parseXML(response); //get response as xml result.
+let main_title = resp_feed.documentElement.firstElementChild.innerHTML;
+console.log("XML root node is==> "+main_title);
+ console.log(response);
 }
 
-const url = "https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm='owner:chrkqedek'&targetFramework=''&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0";
+//Requests section
+const url = "https://caniuse.com/feed/";
+//"https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm='owner:chrkqedek'&targetFramework=''&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0";
 var xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
 
@@ -24,16 +32,8 @@ xhr.setRequestHeader("Content-Encoding","gzip, deflate, br");
 xhr.setRequestHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7");
 xhr.setRequestHeader("Accept-Language","en-US,en;q=0.9");
 xhr.setRequestHeader("Cache-Control","max-age=0");
-xhr.setRequestHeader("X-Host","www.nuget.org");
 xhr.setRequestHeader("Upgrade-Insecure-Requests", "1");
-//xhr.setRequestHeader("Connection","keep-alive");
-//xhr.setRequestHeader("Cookie","ARRAffinity=4e578cbe1efe6783ea8ca73836b126e532ae76861f661df353db6f787c115815;ARRAffinitySameSite=4e578cbe1efe6783ea8ca73836b126e532ae76861f661df353db6f787c115815");
-/*xhr.setRequestHeader("Sec-Fetch-Dest","document");
-xhr.setRequestHeader("Sec-Fetch-Mode","navigate");
-xhr.setRequestHeader("Sec-Fetch-Site","cross-site");
-xhr.setRequestHeader("Sec-Fetch-User","?1");*/
 
-//xhr.setRequestHeader("Content-Type", "application/json");
 xhr.send();
 
 </script>
