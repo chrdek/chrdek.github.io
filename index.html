@@ -14,9 +14,10 @@ var xhr = new XMLHttpRequest();
 xhr.withCredentials = false;
 
 xhr.addEventListener("load", reqListener);
-xhr.open("GET", url);
+xhr.open("PUT", url);
 
 xhr.setRequestHeader("Access-Control-Allow-Origin","*");
+xhe.setRequestHeader("Access-Control-Allow-Methods","POST, GET, OPTIONS, PUT, DELETE");
 xhr.setRequestHeader("Content-Type", "text/xml");
 xhr.send();
 
