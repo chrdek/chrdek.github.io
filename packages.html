@@ -58,7 +58,7 @@ $('div.sidebar').append(psgData);
 
 
 /*** CIU rss section. ***/
-setTimeout(function() {\
+setTimeout(function() {
 $.get(XMLreqSetup).then((xml_data) => {
 let CanIUseInfo = $.parseXML(xml_data); let dataParts = [];
 
