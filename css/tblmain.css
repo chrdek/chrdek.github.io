@@ -1,13 +1,87 @@
 body {
+  display: flex;
+  flex-direction: column;
+   /*justify-content: space-between;*/
   font-family: 'lato', sans-serif; /*font-family: 'Electrolize', sans-serif;*/
+
   background: 
-   -webkit-linear-gradient(rgba(135, 60, 255, 1), rgba(135, 60, 255, 0.0) 0%),
-   -webkit-linear-gradient(45deg, rgba(120, 155, 255, 0.9) 45%, rgba(55, 230, 235, 1) 0%);
+   -webkit-linear-gradient(rgba(136, 60, 255, 1), rgba(135, 60, 255, 0.15) 1.88%),
+   -webkit-linear-gradient(109deg, rgba(120, 155, 255, 0.856) 44%, rgba(55, 230, 235, 0.8) 35%);
+
+  /*background: -webkit-linear-gradient(rgba(135, 60, 255, 1), rgba(135, 60, 255, 0.0) 0%),
+   -webkit-linear-gradient(45deg, rgba(120, 155, 255, 0.9) 45%, rgba(55, 230, 235, 1) 0%);*/
+    
   background-color: #F8F9FD; /* Original Ghost White */
-  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  /*height:100%;*/
 }
 
+.grayeffect {
+/*background-color: #66668a;*/
+  background: 
+  -webkit-linear-gradient(rgba(135, 60, 255, 1), rgba(135, 60, 255, 0.0) 0%),
+ -webkit-linear-gradient(45deg, rgba(120, 155, 255, 0.9) 45%, rgba(55, 230, 235, 1) 0%);
+  background-color: #F8F9FD;
+opacity: 0.9;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #66668a 4px ), repeating-linear-gradient( #56565f55, #56565f );
+background-position: center;
+background-size: cover;
+}
+
+
+hr.green {
+ opacity:0.76;
+ border: 1.5px solid #67aa6a;
+}
+
+.sidebar {
+  border: 2px solid #67aa6a; /*#3AD3E4; #67aa6a;*/
+  border-radius: 10px;
+  font-size:15px;
+  width: 12%;
+  height: 25vh;
+  min-height: 360px;
+  overflow: auto;
+  position: sticky; /*and, or -webkit-sticky*/
+  position: -webkit-sticky;
+  left:100%;
+  bottom:35%;
+  overflow-y:scroll;
+  opacity:0.8;
+  /*top: 10%;  or from top: 0; */
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 4% 98%, #67aa6a 0%, #31dcff 100%);
+}
+
+.sidebar:hover { 
+  filter: drop-shadow(0 0 19px #67aa6a);
+  opacity:0.8;
+  transition: 0.5s;
+}
+
+
+.sidebar::-webkit-scrollbar {
+      width: 5px; 
+      /*display:none;*/
+   }
+
+.sidebar::-webkit-scrollbar-track {
+    background-color:transparent; /*#3AD3E4, transparent;*/
+  }
+
+/* optional: */
+.sidebar::-webkit-scrollbar-thumb {
+    background:#67aa6a; /*#67aa6a; #3AD3E4;*/
+    border-radius: 5px;
+  }
+
+
+
+/* Side panel feeds section end */
+
+#script_test{top:0;}
 
 #text{
   font-size:39px;
@@ -27,6 +101,13 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.aboutcont {
+height:487px;
+
+}
+
+
 
 h2 {
   font-size: 26px;
@@ -99,7 +180,7 @@ h2 small {
 }
 
 
-/*Title hidden when on smaller devices */
+/*Note: Some Information remains hidden when on smaller devices */
 @media(max-width: 767px) {
 
 img#mainTitle{
@@ -107,6 +188,25 @@ padding:0;
 display:none;
  }
 }
+
+
+@media(max-width: 820px) {
+
+div.sidebar{
+padding:0;
+display:none;
+ }
+}
+
+/* TODO: Improvements for width, alternat. content */
+@media(max-width: 1287px) {
+
+div.sidebar {
+width:80px;
+ }
+}
+
+
 
 
 /* Main table documentation status section, animated parts etc. */

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Scripts Section -->
+<script src="./scripts/_meta.js"></script>
+<!--<script src="./scripts/_reqs.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- CSS Section, Title Section -->
+<link href="./styles/tblmain.css" rel="stylesheet" />
+<link href="./styles/navmain.css" rel="stylesheet" />
+<title>Hosted Packages Listing</title>
+<script id="script_test">
+$(document).ready(function() {
+
+/***XML/JSON Generated Content Endpoints. ***/
+const json = "14a13d8b4c7ac6b5e1f8228df1287bbc/raw/d84edfb115eeb51bdd61451a50c31cd9dc486b23/jsonresp";
+const xml_feed = "3c76ba350bf9635c6277e5eee8819a8a/raw/e6eae288020e6dd65647e1aa03e440caec4d3c61/ciuxmlresp.xml";
+//const xml = "a91f9549f67b09237bfd6e27d74fb328/raw/2a2a587c554959d8451c1ecd4d5ac83296e92a1b/xmlresp";
+
+var getStart = new Date().getTime();
+var reqSetup = {
+    url:`https://gist.githubusercontent.com/chrdek/${json}`,
+    crossDomain:true,
+    cache: false,
+    timeout:100000,
+    spinner:true,
+};
+
+
+/*** PSGallery data section. ***/
+$('div.sidebar').append($(`<h3>PSGallery Uploads</h3><hr class="green"/>`)); let psgData = [];
+
+//Retrieve json info here (may contain stale data).
+$.get('https://raw.githubusercontent.com/chrdek/chrdek.github.io/gh-pages/data/psgallery.json').then( (jsondata) => {
+let PSGInfo = $.parseJSON(jsondata);
+
+$.each(PSGInfo, (key,value) => {
+ psgData.push($(`<p><b>${PSGInfo[key].Id}</b></p>
+                  <span><b>Type:${PSGInfo[key].ItemType}</b></span>
+                 <p><b>Version:</b>${PSGInfo[key].LatestVersion}</p><a href="https://www.powershellgallery.com${PSGInfo[key].PackageUrl}">hosted on PSGallery..</a>`));
+  });
+$('div.sidebar').append(psgData);
+},'json');
+
+
+
+/*** CIU rss section. ***/
+setTimeout(function() {
+let CanIUseInfo = $.parseXML(xml_feed); let dataParts = [];
+
+//Map main rss xml feed here..
+let ciuse_title = CanIUseInfo.documentElement.firstElementChild.innerHTML;
+$('div.sidebar').append($(`<h3>${ciuse_title}</h3><hr class="green"/>`));
+
+$(CanIUseInfo).find('entry').each(function(){
+
+  let entry_title = $(this).find('title').text();
+  let linkto_ciuse = $(this).find('link').attr('href');
+
+  dataParts.push($(`<p>${entry_title}</p>
+                 <p><a href=${linkto_ciuse}>view on caniuse..</a>`));
+});
+$('div.sidebar').append(dataParts);
+},1700);
+
+//opt. usage - get the response object from $.get({}); var responseObj = $.get({});
+//Handle data accordingly here.
+$.get(reqSetup).then((data) => {
+
+//Total Duration of request.
+var totalDuration = parseFloat(((new Date().getTime()-getStart)*.001).toString()).toFixed(4);
+
+let packageInfo = JSON.parse(data); //list of packages for display.
+let htmlPart = [];
+
+//Re-set footer info on request data, track per 10 mins..
+var footerInfo2 = document.querySelector("#loadpage2");
+var dataloadingTime = `Data fetched in: ${totalDuration} secs`;   // ${packageInfo[0].RequestTime}`;
+footerInfo2.innerHTML = `<small><strong>${dataloadingTime}</strong></small>`;
+
+$.each( packageInfo, (key, value) => {
+
+var isActive = ( packageInfo[key].IsDocActive ) ? 
+`<a href="https://github.com/chrdek/${packageInfo[key].Name}" target="_blank" rel="noopener noreferrer" title="Open new tab"><div class="col col-6 status" data-label="Docs"><span class="active">Online</span></div></a>` :
+`<div class="col col-6 status" data-label="Docs"><span class="waiting">Offline</span></div>`;
+
+   htmlPart.push($(`<li class="table-row">
+      <a href="https://www.nuget.org/packages/${packageInfo[key].Name}"><div class="col col-1" data-label="Info">🌐 ${packageInfo[key].Name}</div></a>
+      <div class="col col-2" data-label="Version">${packageInfo[key].Version}</div>
+      <div class="col col-3" data-label="Created">${packageInfo[key].DateCreated}</div>
+      <div class="col col-4" data-label="Summary">${packageInfo[key].Description}</div>
+      <div class="col col-5" data-label="Downloads">${packageInfo[key].Downloads}</div>
+      ${isActive}
+    </li>`));
+$('ul').append(htmlPart);
+});
+
+},'json');
+
+//General usage page stats - footer section.
+var visibleloadingTime = `Page loaded in: ${parseFloat(`${(window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart)*.001}`).toFixed(4)}
+secs`;
+
+var footerInfo = document.querySelector("#loadpage");
+footerInfo.innerHTML = `<small><strong>${visibleloadingTime}</strong></small>`;
+  $("body > div > ul.responsive-table").fadeIn(650,'linear');
+});
+</script>
+<!--<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>-->
+</head>
+
+<body>
+<!--Navigation bar section start-->
+<nav class="fixed-nav-bar">
+  <a class="brand">
+   <img src="./icons8-package-64_2nd.png"/>
+  </a>
+
+<!-- MAIN PART OF NAV. BAR -->
+  <a class="brand">
+   <img  id="mainTitle" src="./projects_logo2.PNG"/>
+  </a>
+  <a class="link" href="/index.html">about</a>
+  <a class="link" href="/packages.html">hosted packages</a>
+  <a class="link" href="/index.html">hosted webapps</a>
+</nav>
+<!--Navigation bar section end-->
+
+<div class="container">
+<br/>
+<br/>
+  <h2 style="color:#F8F9FD">{HEADING} listing</h2>
+  <ul class="responsive-table" hidden="true">
+    <li class="table-header">
+      <div class="col col-1">Info</div>
+      <div class="col col-2">Version</div>
+      <div class="col col-3">Created</div>
+      <div class="col col-4">Summary</div>
+      <div class="col col-5">Downloads</div>
+      <div class="col col-6">Docs</div>
+    </li>
+  </ul>
+</div>
+
+<!--Rss Sidebar panel-->
+ <div class="sidebar">
+    
+ </div>
+
+<!-- Footer section start -->
+<nav class="fixed-nav-footer">
+ <span>
+ <strong>
+<a href="https://www.github.com/chrdek">
+  /chrdek/ on GitHub
+</a>
+ </strong>
+ </span>
+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+<div id="loadpage">
+ <!--dynamic page content -->
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+<div id="loadpage2">
+ <!--dynamic page content sect 2-->
+</div>
+
+<!-- Footer section end -->
+</nav>
+</html>
