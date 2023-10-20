@@ -74,7 +74,8 @@ $(CanIUseInfo).find('entry').each(function(){
   dataParts.push($(`<p>${entry_title}</p>
                  <p><a href=${linkto_ciuse}>view on caniuse..</a>`));
 });
-$('div.sidebar').append(dataParts);
+ $('div.sidebar').append(dataParts);
+ });
 },1700);
 
 //opt. usage - get the response object from $.get({}); var responseObj = $.get({});
