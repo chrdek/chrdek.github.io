@@ -31,6 +31,14 @@ var reqSetup = {
     spinner:true,
 };
 
+var XMLreqSetup = {
+    url:`https://gist.githubusercontent.com/chrdek/${xml_feed}`,
+    crossDomain:true,
+    cache: false,
+    timeout:100000,
+    spinner:true,
+};
+
 
 /*** PSGallery data section. ***/
 $('div.sidebar').append($(`<h3>PSGallery Uploads</h3><hr class="green"/>`)); let psgData = [];
@@ -50,8 +58,9 @@ $('div.sidebar').append(psgData);
 
 
 /*** CIU rss section. ***/
-setTimeout(function() {
-let CanIUseInfo = $.parseXML(xml_feed); let dataParts = [];
+setTimeout(function() {\
+$.get(XMLreqSetup).then((xml_data) => {
+let CanIUseInfo = $.parseXML(xml_data); let dataParts = [];
 
 //Map main rss xml feed here..
 let ciuse_title = CanIUseInfo.documentElement.firstElementChild.innerHTML;
