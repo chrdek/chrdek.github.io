@@ -17,6 +17,7 @@ index.json
 *.xslt
 .env
 .env*
+**/*/index.json
 **/*/*.log
 **/*/*.xml
 **/*/*.xslt
