@@ -8,6 +8,7 @@
 *.pfx
 *.pgp
 package.json
+index.json
 .htaccess
 *.htaccess
 *.db
