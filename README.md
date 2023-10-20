@@ -10,4 +10,11 @@ This is created solely for maintaining various projects/apps -and their document
 
 Whole website has been setup in a hurry using only plain-text editor (notepad) and will be further improved in the near future with more projects and content to come..
 
-Content is frequently updated on a weekly basis using action runners etc.
+-----
+
+__NOTE:__
+For the time being the content of this site is static, and will
+
+<br/>
+
+be frequently updated on a weekly basis using action runners etc.
