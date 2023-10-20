@@ -15,7 +15,7 @@ return {
 
    const mTag_1 = document.createElement('meta');
    mTag_1.setAttribute('http-equiv','Content-Security-Policy');
-   mTag_1.setAttribute('content',`script-src-elem 'nonce-${generated}' 'strict-dynamic'; frame-src 'none'`);
+   mTag_1.setAttribute('content',`script-src-elem 'nonce-${generated}' 'strict-dynamic'; frame-src 'none';child-src 'none'`);
    document.head.prepend(mTag_1);
 
    const scrTag_2 = document.getElementById('script_test');
