@@ -11,11 +11,11 @@ return {
 })();
 
  setTimeout(function() {
-   let generated = fngen.UID();
+   let generated = fngen.UID(); //style-src 'self';script-src 'self';
 
    const mTag_1 = document.createElement('meta');
    mTag_1.setAttribute('http-equiv','Content-Security-Policy');
-   mTag_1.setAttribute('content',` script-src 'self'; script-src-elem 'nonce-${generated}' 'strict-dynamic'; style-src 'self';  frame-src 'none'; child-src 'none'`);
+   mTag_1.setAttribute('content',`  script-src-elem 'nonce-${generated}' 'strict-dynamic';   frame-src 'none'; child-src 'none'`);
    document.head.prepend(mTag_1);
 
    const scrTag_2 = document.getElementById('script_test');
