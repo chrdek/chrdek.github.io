@@ -8,7 +8,7 @@ This is created solely for maintaining various projects/apps -and their document
 
 <br/>
 
-Entire website has been setup in a hurry using only plain-text editor (notepad) and will be further improved in the near future with more projects and content to come..
+Entire website has __been setup in a hurry using only plain-text editor__ (notepad) and will be further improved in the near future with more projects and content to come..
 
 -----
 <br/>
