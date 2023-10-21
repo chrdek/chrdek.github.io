@@ -13,7 +13,6 @@ index.json
 *.htaccess
 *.db
 *.log
-*.xml
 *.xslt
 .env
 .env*
