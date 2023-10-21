@@ -1,0 +1,30 @@
+<!-- If you want to Allow all search engines to index your website you can put * sign 
+
+User-agent: *-->
+
+<!-- If you want to Allow only google to index your website  -->
+
+User-agent: googlebot
+
+<!-- Linking sitemap in Robots.txt  -->
+
+sitemap: https://chrdek.github.io/sitemap.xml
+
+<!-- Linking sitemap showcase photographs in Robots.txt 
+
+sitemap: http://yourdomain.com/sitemap-images.xml -->
+
+<!-- Linking sitemap showcase videos in Robots.txt 
+
+sitemap: http://yourdomain.com/sitemap-videos.xml -->
+
+<!-- Adding this will prevent all Search Engines to index your website
+
+Disallow: / -->
+
+<!-- Prevent search engines to index specific folder/private folder
+Disallow: /example/
+Disallow: /example/ -->
+
+<!-- Prevent search engines to index specific file-->
+Disallow: /404.html
