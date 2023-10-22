@@ -21,7 +21,6 @@ index.json
 **/*/*.xml
 **/*/*.xslt
 **/.env*
-**/*.yml
 **/js/
 **/javascript/
 **/test[s]/

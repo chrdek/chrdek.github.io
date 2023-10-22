@@ -1,0 +1,16 @@
+name: Weekly Content Updates
+
+on:
+  workflow_dispatch
+
+jobs:
+  getcontent:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Content
+      id: getContent
+      run: |
+        echo "NUG_RESPONSE=$(curl 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm='owner:chrkqedek'&targetFramework=''&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0')"
+        printf '%s\n' "$NUG_RESPONSE"
+      env:
+        NUGET_GEN: ${{ secrets.NUGET_GEN }}
