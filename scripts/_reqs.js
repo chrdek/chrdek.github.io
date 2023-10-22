@@ -1,6 +1,6 @@
 (function() {
  const xhr = new XMLHttpRequest()
- xhr.open( 'POST','https://chrdek.github.io');
+ xhr.open( 'POST','http://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/');
  xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
  xhr.setRequestHeader('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT');
  xhr.setRequestHeader('Content-type','application/reports+json');
@@ -9,4 +9,5 @@
  xhr.onreadystatechange = function() {
     console.log("presetting uri ok")
 }
+xhr.send(null);
 })();
