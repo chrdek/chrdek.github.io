@@ -4,13 +4,13 @@ on:
   workflow_dispatch
 
 jobs:
-  getcontent:
+  weeklycontentupdate:
     runs-on: ubuntu-latest
     steps:
     - name: Get Content
       id: getContent
       run: |
-        "NUG_RESPONSE=$(curl 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0')"
+        "{NUG_RESPONSE}={$(curl 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0')}" >> "$GITHUB_ENV"
       env:
         NUGET_GEN: ${{ secrets.NUGET_GEN }}
     - name: Set Update
