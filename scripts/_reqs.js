@@ -1,10 +1,12 @@
-/*(function(url) {
+(function() {
  const xhr = new XMLHttpRequest()
- xhr.open( 'GET','https://chrdek.github.io');
+ xhr.open( 'POST','https://chrdek.github.io');
  xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
-xhr.setRequestHeader('Content-Security-Policy-Report-Only','default-src https:; report-to /csp-violation-report-endpoint/');
+ xhr.setRequestHeader('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT');
+ xhr.setRequestHeader('Content-type','application/reports+json');
+ xhr.setRequestHeader('Reporting-Endpoints','main-endpoint="http://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/"');
  xhr.withCredentials = false;
  xhr.onreadystatechange = function() {
     console.log("presetting uri ok")
 }
-})();*/
+})();
