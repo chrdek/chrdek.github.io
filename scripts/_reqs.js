@@ -1,4 +1,4 @@
-(function() {
+/*(function() {
  const xhr = new XMLHttpRequest()
  xhr.open( 'POST','https://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/');
  xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
@@ -10,4 +10,4 @@
     console.log("presetting uri ok")
 }
 xhr.send(null);
-})();
+})();*/
