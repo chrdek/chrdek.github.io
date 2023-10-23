@@ -6,9 +6,6 @@ on:
 jobs:
   weeklycontentupdate:
     runs-on: ubuntu-latest
-    permissions:
-      gists: write
-      gists: read
     steps:
     - name: Get Content
       id: getContent
