@@ -7,7 +7,7 @@ jobs:
   weeklycontentupdate:
     runs-on: ubuntu-latest
     env:
-      NUGET_GEN:${{ secrets.NUGET_GEN }}
+      NUGET_GEN: ${{ secrets.NUGET_GEN }}
     steps:
     - name: Get Content
       id: getContent
