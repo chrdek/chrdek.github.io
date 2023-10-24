@@ -13,8 +13,8 @@ jobs:
         clearContent: ""
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
-        echo "$(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0' | base64 | sed -z s/\\n$//)" >> $GITHUB_ENV
-        echo $($NUG_RESPONSE | base64 | sed -z s/\\n$//) >> $GITHUB_ENV
+        echo "$(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&semVerLevel=2.0.0' | base64 | sed -z 's/\\n$//')" >> $GITHUB_ENV
+        echo $($NUG_RESPONSE | base64 | sed -z 's/\\n$//') >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
     - name: Upload to accesible Gist
       id: uploadToGist
