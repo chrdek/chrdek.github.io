@@ -11,6 +11,7 @@ jobs:
       id: setUpdatedContent
       env:
         xmlContent: "<xml1></xml1>"
+      run: echo "Initialized environment.."
     - name: Environment preset
       run: echo "NUGET_RESP=$(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0')" >> $GITHUB_ENV
     - name: Apply Content
