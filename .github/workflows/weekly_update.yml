@@ -10,7 +10,7 @@ jobs:
     - name: Set Update
       id: setUpdatedContent
       env:
-        xmlContent: "<test1></test1>"
+        xmlContent: "$(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0')"
         ACTION_TOKEN: ${{ secrets.GH_ACTION }}
       run: |
         NUG_RESPONSE=$(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&$top=5&semVerLevel=2.0.0')
