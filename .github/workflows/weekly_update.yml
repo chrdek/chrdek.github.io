@@ -14,7 +14,7 @@ jobs:
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
         echo $(curl --no-progress-meter 'https://api-v2v3search-0.nuget.org/query?q=chrkqedek&prerelease=false') >> $GITHUB_ENV
-        echo "EOF"  >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
     - name: Upload to accesible Gist
       id: uploadToGist
       env:
