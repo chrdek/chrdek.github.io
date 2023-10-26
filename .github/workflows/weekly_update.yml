@@ -10,7 +10,7 @@ jobs:
     - name: Set updated content and parsing
       id: setUpdatedContent
       env:
-        ownerName:"chrkqedek"
+        ownerName: "chrkqedek"
         isXmlResp: "FALSE"
     - if: ${{ env.isXmlResp == "FALSE" }}
       run: |
