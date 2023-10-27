@@ -1,4 +1,4 @@
-name: Weekly Content Updates
+name: Weekly Web Updates
 
 on:
   workflow_dispatch
@@ -7,7 +7,7 @@ jobs:
   weeklycontentupdate:
     runs-on: ubuntu-latest
     steps:
-    - name: Set updated content (XML, JSON)
+    - name: Set updated content [XML or JSON]
       id: setUpdatedContent
       env:
         ownerName: chrkqedek
