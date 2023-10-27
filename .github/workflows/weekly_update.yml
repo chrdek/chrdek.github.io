@@ -11,7 +11,7 @@ jobs:
       id: setUpdatedXML
       env:
         ownerName: ""
-        isXmlResp: true
+        isXmlResp: false
       if: ${{ env.isXmlResp }} == true
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
