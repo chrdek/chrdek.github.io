@@ -10,7 +10,7 @@ jobs:
     - name: Set updated content XML (if true)
       id: setUpdatedXML
       env:
-        ownerName: chrkqedek
+        ownerName: "chrkqedek"
         isXmlResp: true
       if: ${{ env.isXmlResp }} == true
       run: |
