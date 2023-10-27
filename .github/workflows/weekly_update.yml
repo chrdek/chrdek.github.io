@@ -21,7 +21,7 @@ jobs:
         ACTION_TOKEN: ${{ secrets.GH_ACTION }}
         RESPONSE: "${{ env.NUG_RESPONSE }}"
         isXmlResp: false
-      if: ${{ !env.isXmlResp }}
+      if: ${{ !(env.isXmlResp) == true }}
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
         echo $(curl --no-progress-meter 'https://api-v2v3search-0.nuget.org/query?q=chrkqedek&prerelease=false' | base64) | sed 's/ //g' >> $GITHUB_ENV
