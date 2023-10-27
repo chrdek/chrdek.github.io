@@ -12,8 +12,8 @@ jobs:
       env:
         ownerName: chrkqedek
         isXmlResp: ${{ secrets.IS_XML }}
+    - if: ${{ env.isXmlResp == 'TRUE' }}
       run: |
-      if: ${{ env.isXmlResp }} == 'TRUE'
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
         echo $(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3A${{ env.ownerName }}%27&targetFramework=%27%27&includePrerelease=false&$skip=0&semVerLevel=2.0.0' | base64) | sed 's/ //g' >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
@@ -23,7 +23,7 @@ jobs:
         ACTION_TOKEN: ${{ secrets.GH_ACTION }}
         RESPONSE: "${{ env.NUG_RESPONSE }}"
         isXmlResp: ${{ secrets.IS_XML }}
-      if: ${{ env.isXmlResp }} == 'FALSE'
+    - if: ${{ env.isXmlResp == 'FALSE' }}
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
         echo $(curl --no-progress-meter 'https://api-v2v3search-0.nuget.org/query?q=${{ env.ownerName }}&prerelease=false' | base64) | sed 's/ //g' >> $GITHUB_ENV
