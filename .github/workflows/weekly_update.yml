@@ -10,10 +10,10 @@ jobs:
     - name: Set updated content (XML, JSON)
       id: setUpdatedContent
       env:
-        ownerName: "chrkqedek"
+        ownerName: chrkqedek
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
-        echo $(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3Achrkqedek%27&targetFramework=%27%27&includePrerelease=false&$skip=0&semVerLevel=2.0.0' | base64) | sed 's/ //g' >> $GITHUB_ENV
+        echo $(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3A${{ env.ownerName }}%27&targetFramework=%27%27&includePrerelease=false&$skip=0&semVerLevel=2.0.0' | base64) | sed 's/ //g' >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
     - name: Check for Json Format
       id: checkJsonResponse
@@ -24,7 +24,7 @@ jobs:
       if: ${{ env.isXmlResp == 'FALSE' }}
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
-        echo $(curl --no-progress-meter 'https://api-v2v3search-0.nuget.org/query?q=chrkqedek&prerelease=false' | base64) | sed 's/ //g' >> $GITHUB_ENV
+        echo $(curl --no-progress-meter 'https://api-v2v3search-0.nuget.org/query?q=${{ env.ownerName }}&prerelease=false' | base64) | sed 's/ //g' >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
     - name: Update accesible Gists
       id: updateGists
