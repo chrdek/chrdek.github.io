@@ -7,25 +7,27 @@ jobs:
   weeklycontentupdate:
     runs-on: ubuntu-latest
     steps:
-    - name: Set updated content and parsing
-      id: setUpdatedContent
+    - name: Set updated content XML (if true)
+      id: setUpdatedXML
       env:
         ownerName: 'chrkqedek'
         isXmlResp: true
       if: ${{ env.isXmlResp }} == true
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
-        echo $(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3A{{ env.ownerName }}%27&targetFramework=%27%27&includePrerelease=false&$skip=0&semVerLevel=2.0.0' | base64) >> $GITHUB_ENV
+        echo $(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3A{{ env.ownerName }}%27&targetFramework=%27%27&includePrerelease=false&$skip=0&semVerLevel=2.0.0' | base64 | sed 's/ //g') >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
-    - name: Upload to accesible Gist
-      id: uploadToGist
+    - name: Set updated content JSON (if not)
+      id: setUpdatedJSON
       env:
         ACTION_TOKEN: ${{ secrets.GH_ACTION }}
         RESPONSE: "${{ env.NUG_RESPONSE }}"
       if: ${{ env.isXmlResp }} != true
       run: |
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
-        echo $(curl --no-progress-meter 'https://api-v2v3search-0.nuget.org/query?q={{ env.ownerName }}&prerelease=false' | base64) >> $GITHUB_ENV
+        echo $(curl --no-progress-meter 'https://api-v2v3search-0.nuget.org/query?q={{ env.ownerName }}&prerelease=false' | base64 | sed 's/ //g') >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
+    - name: Upload to accesible Gist
+      id: uploadToGist
       run: |
         curl --no-progress-meter  -L -X PATCH -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $ACTION_TOKEN" -H "X-Github-Api-Version: 2022-11-28" https://api.github.com/gists/14382e201fb6be671a33af3feae2c58d -d '{"description":"rssdata","files":{"test_gst.txt":{"content":"${{ env.RESPONSE }}" }}}'
