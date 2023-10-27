@@ -7,7 +7,7 @@ jobs:
   weeklycontentupdate:
     runs-on: ubuntu-latest
     steps:
-    - name: Set updated content [XML or JSON]
+    - name: Set updated content (XML, JSON)
       id: setUpdatedContent
       env:
         ownerName: chrkqedek
@@ -15,7 +15,7 @@ jobs:
         echo "NUG_RESPONSE<<EOF" >> $GITHUB_ENV
         echo $(curl --no-progress-meter 'https://www.nuget.org/api/v2/Search()?$filter=IsLatestVersion&searchTerm=%27owner%3A${{ env.ownerName }}%27&targetFramework=%27%27&includePrerelease=false&$skip=0&semVerLevel=2.0.0' | base64) | sed 's/ //g' >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
-    - name: Check for Json Format
+    - name: Check for JSON Format
       id: checkJsonResponse
       env:
         ACTION_TOKEN: ${{ secrets.GH_ACTION }}
