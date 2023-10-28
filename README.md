@@ -17,7 +17,7 @@ __WEB REPO STATS__
 
 
 |  Action  |  Status  |
-|:---------|:---------|
+|:---------:|:---------:|
 |  Deploy  |  [![Web Deploy](https://github.com/chrdek/chrdek.github.io/actions/workflows/static.yml/badge.svg)](https://github.com/chrdek/chrdek.github.io/README.md)  |
 |  Build  |  [![Web Build](https://github.com/chrdek/chrdek.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/chrdek/chrdek.github.io/README.md)  |
 |  Update  |  [![Weekly Content Updates](https://github.com/chrdek/chrdek.github.io/actions/workflows/weekly_update.yml/badge.svg)](https://github.com/chrdek/chrdek.github.io/README.md)  |
