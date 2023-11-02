@@ -1,10 +1,10 @@
-<!-- If you want to Allow all search engines to index your website you can put * sign 
+<!-- If you want to Allow all search engines to index your website you can put * sign -->
 
-User-agent: *-->
+User-agent: *
 
-<!-- If you want to Allow only google to index your website  -->
+<!-- If you want to Allow only google to index your website
 
-User-agent: googlebot
+User-agent: googlebot  -->
 
 <!-- Linking sitemap in Robots.txt  -->
 

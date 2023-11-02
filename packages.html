@@ -3,6 +3,7 @@
 
 <head>
 <!--<script src="./scripts/_reqs.js"></script>-->
+<script src="./script/_validateData.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 <!-- rem. seo for google matches etc. or add everything
@@ -34,6 +35,8 @@
 <title>Hosted Packages Listing</title>
 <script id="script_test">
 $(document).ready(function() {
+
+let dataSrcValidate = new ValidateInput();
 
 /***XML/JSON Generated Content Endpoints. ***/
 const json = "14a13d8b4c7ac6b5e1f8228df1287bbc/raw/d84edfb115eeb51bdd61451a50c31cd9dc486b23/jsonresp";
@@ -105,6 +108,9 @@ var totalDuration = parseFloat(((new Date().getTime()-getStart)*.001).toString()
 
 let packageInfo = JSON.parse(data); //list of packages for display.
 let htmlPart = [];
+
+console.log(`Data is set to : ${dataSrcValidate.isXmlOrJs(packageInfo)}`);
+
 
 //Re-set footer info on request data, track per 10 mins..
 var footerInfo2 = document.querySelector("#loadpage2");
