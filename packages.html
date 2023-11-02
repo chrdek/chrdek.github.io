@@ -108,7 +108,7 @@ let packageInfo = JSON.parse(data); //list of packages for display.
 let htmlPart = [];
 
 let dataSrcValidate = new ValidateInput(packageInfo);
-console.log(`Data is set to : ${dataSrcValidate.isXmlOrJs(packageInfo)}`);
+console.log(`Data is set to : ${dataSrcValidate.isXmlOrJs()}`);
 
 
 //Re-set footer info on request data, track per 10 mins..
