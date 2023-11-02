@@ -7,6 +7,5 @@ class ValidateInput {
 isXmlorJs(this.testdata) {
 return Boolean((new DOMParser().parseFromString(this.testdata,'application/xml').querySelector('parsererror') != undefined) & (JSON.stringify(this.testdata).match(this.jsonPattern) != null))
 ? 'JSON' : 'XML'
-}
-
+ }
 }
