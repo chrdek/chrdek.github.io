@@ -36,8 +36,6 @@
 <script id="script_test">
 $(document).ready(function() {
 
-let dataSrcValidate = new ValidateInput();
-
 /***XML/JSON Generated Content Endpoints. ***/
 const json = "14a13d8b4c7ac6b5e1f8228df1287bbc/raw/d84edfb115eeb51bdd61451a50c31cd9dc486b23/jsonresp";
 const xml_feed = "3c76ba350bf9635c6277e5eee8819a8a/raw/e6eae288020e6dd65647e1aa03e440caec4d3c61/ciuxmlresp.xml";
@@ -109,6 +107,7 @@ var totalDuration = parseFloat(((new Date().getTime()-getStart)*.001).toString()
 let packageInfo = JSON.parse(data); //list of packages for display.
 let htmlPart = [];
 
+let dataSrcValidate = new ValidateInput(packageInfo);
 console.log(`Data is set to : ${dataSrcValidate.isXmlOrJs(packageInfo)}`);
 
 
