@@ -10,11 +10,4 @@
     console.log("presetting uri ok")
 }
 xhr.send(null);
-})();*/
-
-
-(function() {
-
-
-
-})();
+})(); IIFE end..*/
