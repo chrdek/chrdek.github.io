@@ -4,7 +4,7 @@ class ValidateInput {
    this.jsonPattern = '/(\|{\[){1,}|(\}|\]){1,}/g';
  }
 
-const isXmlorJs = (this.testdata) => Boolean((new DOMParser().parseFromString(this.testdata,'application/xml').querySelector('parsererror') != undefined) & (JSON.stringify(this.testdata).match(this.jsonPattern) != null))
+this.isXmlorJs = (this.testdata) => Boolean((new DOMParser().parseFromString(this.testdata,'application/xml').querySelector('parsererror') != undefined) & (JSON.stringify(this.testdata).match(this.jsonPattern) != null))
 ? 'JSON' : 'XML';
 
 }
