@@ -109,13 +109,16 @@ let htmlPart = [];
 
 
 //let dataSrcValidate = new ValidateInput(packageInfo).isXmlOrJs();
-console.log(`Data is set to : ${isXmlorJs(packageInfo)}`);
+//console.log(`Data is set to : ${isXmlorJs(packageInfo)}`);
 
 
 //Re-set footer info on request data, track per 10 mins..
 var footerInfo2 = document.querySelector("#loadpage2");
+var footerInfo3 = document.querySelector("#loadpage3");
 var dataloadingTime = `Data fetched in: ${totalDuration} secs`;   // ${packageInfo[0].RequestTime}`;
+var datasrcType = `Data source is: ${isXmlorJs(packageInfo)}`;
 footerInfo2.innerHTML = `<small><strong>${dataloadingTime}</strong></small>`;
+footerInfo3.innerHTML = `<small><strong>${datasrcType}</strong></small>`;
 
 $.each( packageInfo, (key, value) => {
 
@@ -202,6 +205,10 @@ footerInfo.innerHTML = `<small><strong>${visibleloadingTime}</strong></small>`;
 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 <div id="loadpage2">
  <!--dynamic page content sect 2-->
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+<div id="loadpage3">
+ <!--dynamic page content sect 3-->
 </div>
 
 <!-- Footer section end -->
