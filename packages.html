@@ -3,6 +3,7 @@
 
 <head>
 <!--<script src="./scripts/_reqs.js"></script>-->
+<script src="./scripts/_validateData.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 <!-- rem. seo for google matches etc. or add everything
@@ -106,8 +107,8 @@ var totalDuration = parseFloat(((new Date().getTime()-getStart)*.001).toString()
 let packageInfo = JSON.parse(data); //list of packages for display.
 let htmlPart = [];
 
-let dataSrcValidate = new ValidateInput(packageInfo);
-console.log(`Data is set to : ${dataSrcValidate.isXmlOrJs()}`);
+let dataSrcValidate = new ValidateInput(packageInfo).isXmlOrJs();
+console.log(`Data is set to : ${dataSrcValidate}`);
 
 
 //Re-set footer info on request data, track per 10 mins..
@@ -206,6 +207,5 @@ footerInfo.innerHTML = `<small><strong>${visibleloadingTime}</strong></small>`;
 </nav>
 <!-- Scripts Section -->
 <script src="./scripts/_meta.js"></script>
-<script src="./scripts/_validateData.js"></script>
 <div hidden=true><a href="https://raw.githubusercontent.com/chrdek/chrdek.github.io/gh-pages/sitemap.xml"></a></div>
 </html>
