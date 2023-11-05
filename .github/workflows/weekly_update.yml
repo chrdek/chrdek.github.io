@@ -1,7 +1,8 @@
 name: Weekly Content Updates
 
 on:
-  workflow_dispatch
+  schedule:
+  - cron: "0 14 * * 0"
 
 jobs:
   weeklycontentupdate:
