@@ -14,7 +14,7 @@ const retFullUrl = (byKey) => `https://gist.githubusercontent.com/chrdek/${url_e
 var getStart = new Date().getTime();
 
 
-//initializat. requests for data retrieval.
+//Initializat. requests for data retrieval.
 var reqVector = [
 {
     url:retFullUrl(0),
@@ -54,12 +54,6 @@ $.each(PSGInfo, (key,value) => {
 $('div.sidebar').append(psgData);
 },'json');
 
-$.get("https://caniuse.com/feed/").then((result) => {
- let caniusecom = $.parseXML(result); 
-
-console.log("latest update from ciu:");
-console.log(caniusecom);
-});
 
 /*** CIU rss section. ***/
 setTimeout(function() {
@@ -100,7 +94,7 @@ $.getJSON(reqVector[2].url,function(xml_trans){
 var footerInfo2 = document.querySelector("#loadpage2");
 var footerInfo3 = document.querySelector("#loadpage3");
 var dataloadingTime = `Data fetched in: ${totalDuration} secs`;   // ${packageInfo[0].RequestTime}`;
-var datasrcType = `Data from: ${isXmlorJs(packageInfo)}`;
+var datasrcType = `Data is: ${isXmlorJs(packageInfo)}`;
 footerInfo2.innerHTML = `<small><strong>${dataloadingTime}</strong></small>`;
 footerInfo3.innerHTML = `<small><strong>${datasrcType}</strong></small>`;
 
@@ -116,14 +110,14 @@ var isActive = ( packageInfo[key].verified ) ?
       <a href="https://www.nuget.org/packages/${packageInfo[key].id}"><div class="col col-1" data-label="Info">🌐 ${packageInfo[key].id}</div></a>
       <div class="col col-2" data-label="Version">${packageInfo[key].version}</div>
       <div class="col col-3" data-label="Created">${xml_trans[key].DateCreated}</div>
-      <div class="col col-4" data-label="Summary">${packageInfo[key].description.replace('"','')}</div>
+      <div class="col col-4" data-label="Summary">${packageInfo[key].description}</div>
       <div class="col col-5" data-label="Downloads">${packageInfo[key].totalDownloads}</div>
       ${isActive}
     </li>`));
 $('ul').append(htmlPart);
 });
 
-}); //
+});
 },'json');
 
 //General usage page stats - footer section.
