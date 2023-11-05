@@ -54,6 +54,12 @@ $.each(PSGInfo, (key,value) => {
 $('div.sidebar').append(psgData);
 },'json');
 
+$.get("https://feeds.feedburner.com/WhenCanIUse").then((result) => {
+ let caniusecom = $.parseXML(result); 
+
+console.log("latest update from ciu:");
+console.log(caniusecom);
+});
 
 /*** CIU rss section. ***/
 setTimeout(function() {
