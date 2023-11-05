@@ -54,7 +54,7 @@ $.each(PSGInfo, (key,value) => {
 $('div.sidebar').append(psgData);
 },'json');
 
-$.get("https://feeds.feedburner.com/WhenCanIUse").then((result) => {
+$.get("https://caniuse.com/feed/").then((result) => {
  let caniusecom = $.parseXML(result); 
 
 console.log("latest update from ciu:");
@@ -116,7 +116,7 @@ var isActive = ( packageInfo[key].verified ) ?
       <a href="https://www.nuget.org/packages/${packageInfo[key].id}"><div class="col col-1" data-label="Info">🌐 ${packageInfo[key].id}</div></a>
       <div class="col col-2" data-label="Version">${packageInfo[key].version}</div>
       <div class="col col-3" data-label="Created">${xml_trans[key].DateCreated}</div>
-      <div class="col col-4" data-label="Summary">${packageInfo[key].description}</div>
+      <div class="col col-4" data-label="Summary">${packageInfo[key].description.replace('"','')}</div>
       <div class="col col-5" data-label="Downloads">${packageInfo[key].totalDownloads}</div>
       ${isActive}
     </li>`));
