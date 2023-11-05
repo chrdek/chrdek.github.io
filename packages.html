@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-<!--<script src="./scripts/_reqs.js"></script>-->
-<script src="./scripts/_validateData.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./scripts/_validateData.js"></script>
+<script src="./scripts/_reqs.js"></script>
 
 <!-- rem. seo for google matches etc. or add everything
 <meta name='robots' content='noindex,nofollow' />
@@ -34,121 +34,7 @@
 <link href="./css/tblmain.css" rel="stylesheet" />
 <link href="./css/navmain.css" rel="stylesheet" />
 <title>Hosted Packages Listing</title>
-<script id="script_test">
-$(document).ready(function() {
-
-/***XML/JSON Generated Content Endpoints. ***/
-const json = "14a13d8b4c7ac6b5e1f8228df1287bbc/raw/d84edfb115eeb51bdd61451a50c31cd9dc486b23/jsonresp";
-const xml_feed = "3c76ba350bf9635c6277e5eee8819a8a/raw/e6eae288020e6dd65647e1aa03e440caec4d3c61/ciuxmlresp.xml";
-//const xml = "a91f9549f67b09237bfd6e27d74fb328/raw/2a2a587c554959d8451c1ecd4d5ac83296e92a1b/xmlresp";
-
-var getStart = new Date().getTime();
-var reqSetup = {
-    url:`https://gist.githubusercontent.com/chrdek/${json}`,
-    crossDomain:true,
-    cache: false,
-    timeout:100000,
-    spinner:true,
-};
-
-var XMLreqSetup = {
-    url:`https://gist.githubusercontent.com/chrdek/${xml_feed}`,
-    crossDomain:true,
-    cache: false,
-    timeout:100000,
-    spinner:true,
-};
-
-
-/*** PSGallery data section. ***/
-$('div.sidebar').append($(`<h3>PSGallery Uploads</h3><hr class="green"/>`)); let psgData = [];
-
-//Retrieve json info here (may contain stale data).
-$.get('https://raw.githubusercontent.com/chrdek/chrdek.github.io/gh-pages/data/psgallery.json').then( (jsondata) => {
-let PSGInfo = $.parseJSON(jsondata);
-
-$.each(PSGInfo, (key,value) => {
- psgData.push($(`<p><b>${PSGInfo[key].Id}</b></p>
-                  <span><b>Type:${PSGInfo[key].ItemType}</b></span>
-                 <p><b>Version:</b>${PSGInfo[key].LatestVersion}</p><a href="https://www.powershellgallery.com${PSGInfo[key].PackageUrl}">hosted on PSGallery..</a>`));
-  });
-$('div.sidebar').append(psgData);
-},'json');
-
-
-
-/*** CIU rss section. ***/
-setTimeout(function() {
-$.get(XMLreqSetup).then((xml_data) => {
-let CanIUseInfo = $.parseXML(xml_data); let dataParts = [];
-
-//Map main rss xml feed here..
-let ciuse_title = CanIUseInfo.documentElement.firstElementChild.innerHTML;
-$('div.sidebar').append($(`<h3>${ciuse_title}</h3><hr class="green"/>`));
-
-$(CanIUseInfo).find('entry').each(function(){
-
-  let entry_title = $(this).find('title').text();
-  let linkto_ciuse = $(this).find('link').attr('href');
-
-  dataParts.push($(`<p>${entry_title}</p>
-                 <p><a href=${linkto_ciuse}>view on caniuse..</a>`));
-});
- $('div.sidebar').append(dataParts);
- });
-},1700);
-
-//opt. usage - get the response object from $.get({}); var responseObj = $.get({});
-//Handle data accordingly here.
-$.get(reqSetup).then((data) => {
-
-//Total Duration of request.
-var totalDuration = parseFloat(((new Date().getTime()-getStart)*.001).toString()).toFixed(4);
-
-let packageInfo = JSON.parse(data); //list of packages for display.
-let htmlPart = [];
-
-
-//let dataSrcValidate = new ValidateInput(packageInfo).isXmlOrJs();
-//console.log(`Data is set to : ${isXmlorJs(packageInfo)}`);
-
-
-//Re-set footer info on request data, track per 10 mins..
-var footerInfo2 = document.querySelector("#loadpage2");
-var footerInfo3 = document.querySelector("#loadpage3");
-var dataloadingTime = `Data fetched in: ${totalDuration} secs`;   // ${packageInfo[0].RequestTime}`;
-var datasrcType = `Data from: ${isXmlorJs(packageInfo)}`;
-footerInfo2.innerHTML = `<small><strong>${dataloadingTime}</strong></small>`;
-footerInfo3.innerHTML = `<small><strong>${datasrcType}</strong></small>`;
-
-$.each( packageInfo, (key, value) => {
-
-var isActive = ( packageInfo[key].IsDocActive ) ? 
-`<a href="https://chrdek.github.io/docs/${packageInfo[key].Name}.html" target="_blank" rel="noopener noreferrer" title="Open new tab"><div class="col col-6 status" data-label="Docs"><span class="active">Online</span></div></a>` :
-`<div class="col col-6 status" data-label="Docs"><span class="waiting">Offline</span></div>`;
-
-   htmlPart.push($(`<li class="table-row">
-      <a href="https://www.nuget.org/packages/${packageInfo[key].Name}"><div class="col col-1" data-label="Info">🌐 ${packageInfo[key].Name}</div></a>
-      <div class="col col-2" data-label="Version">${packageInfo[key].Version}</div>
-      <div class="col col-3" data-label="Created">${packageInfo[key].DateCreated}</div>
-      <div class="col col-4" data-label="Summary">${packageInfo[key].Description}</div>
-      <div class="col col-5" data-label="Downloads">${packageInfo[key].Downloads}</div>
-      ${isActive}
-    </li>`));
-$('ul').append(htmlPart);
-});
-
-},'json');
-
-//General usage page stats - footer section.
-var visibleloadingTime = `Page loaded in: ${parseFloat(`${(window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart)*.001}`).toFixed(4)}
-secs`;
-
-var footerInfo = document.querySelector("#loadpage");
-footerInfo.innerHTML = `<small><strong>${visibleloadingTime}</strong></small>`;
-  $("body > div > ul.responsive-table").fadeIn(650,'linear');
-});
-</script>
+<script id="script_test"></script>
 <!--<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>-->
 </head>
 
