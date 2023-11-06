@@ -9,6 +9,8 @@ const url_entries = new Map([
 
 const retFullUrl = (byKey) => `https://gist.githubusercontent.com/chrdek/${url_entries.get(byKey)}/raw/`
 
+const isXmlorJs = (res) => Boolean((new DOMParser().parseFromString(res,'application/xml').querySelector('parsererror') != undefined) || (JSON.stringify(res).match(/(\|{\[){1,}|(\}|\]){1,}/g) != null))
+? 'JSON' : 'XML';
 
 //Requests section.
 var getStart = new Date().getTime();
