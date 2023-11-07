@@ -10,15 +10,19 @@ const url_entries = new Map([
 const retFullUrl = (byKey) => `https://gist.githubusercontent.com/chrdek/${url_entries.get(byKey)}/raw/`
 
 
-//additional data source validat.
-const isXmlorJs = (res) => Boolean((new DOMParser().parseFromString(res,'application/xml').querySelector('parsererror') != undefined) || (JSON.stringify(res).match(/(\|{\[){1,}|(\}|\]){1,}/g) != null))
-? 'JSON' : 'XML';
+const isXmlorJs = (res) => {
+if (new DOMParser().parseFromString(res,'application/xml').querySelector('parsererror') == undefined)
+return 'XML';
+if(JSON.stringify(res).match(/(\|{\[){1,}|(\}|\]){1,}/g) != null)
+return 'JSON';
+}
+
 
 //Requests section.
 var getStart = new Date().getTime();
 
 
-//Initializat. requests for data retrieval.
+//initializat. requests for data retrieval.
 var reqVector = [
 {
     url:retFullUrl(0),
@@ -83,10 +87,12 @@ $(CanIUseInfo).find('entry').each(function(){
 /*** Handle Nuget json/xml data accordingly here. ***/
 $.get(reqVector[1]).then((data) => {
 
+//Data source definit. section..
+var wf_response = isXmlorJs(atob(data));
 //Total Duration of request.
 var totalDuration = parseFloat(((new Date().getTime()-getStart)*.001).toString()).toFixed(4);
 
-//Updated data parts..
+if (wf_response == 'JSON') {
 let packageInfo = JSON.parse(atob(data)).data; //list of packages for display.
 let htmlPart = [];
 
@@ -98,7 +104,7 @@ $.getJSON(reqVector[2].url,function(xml_trans){
 var footerInfo2 = document.querySelector("#loadpage2");
 var footerInfo3 = document.querySelector("#loadpage3");
 var dataloadingTime = `Data fetched in: ${totalDuration} secs`;   // ${packageInfo[0].RequestTime}`;
-var datasrcType = `Data is: ${isXmlorJs(packageInfo)}`;
+var datasrcType = `Data is: ${wf_response}`;
 footerInfo2.innerHTML = `<small><strong>${dataloadingTime}</strong></small>`;
 footerInfo3.innerHTML = `<small><strong>${datasrcType}</strong></small>`;
 
@@ -119,9 +125,46 @@ var isActive = ( packageInfo[key].verified ) ?
       ${isActive}
     </li>`));
 $('ul').append(htmlPart);
-});
+  });
+ });
+ } //json part render..
 
-});
+if (wf_response == 'XML') {
+let xmlPackageFeeds = $.parseXML(XML_tests); //xml atom-based parsed nuget packages for display.
+let mainXMLFeed = xmlPackageFeeds.documentElement;
+
+let htmlPart = [];
+let unavail_docs = [];
+
+//Re-set footer info on request data, track per 10 mins..
+var footerInfo2 = document.querySelector("#loadpage2");
+var footerInfo3 = document.querySelector("#loadpage3");
+var dataloadingTime = `Data fetched in: ${totalDuration} secs`;   // ${packageInfo[0].RequestTime}`;
+var datasrcType = `Data is: ${wf_response}`;
+footerInfo2.innerHTML = `<small><strong>${dataloadingTime}</strong></small>`;
+footerInfo3.innerHTML = `<small><strong>${datasrcType}</strong></small>`;
+
+$(mainXMLFeed).find('entry').each(function(key, value) {
+
+//Check for documentation availability, add to list..
+unavail_docs[key] = (key == 1) ? false: Boolean($(this).find('m\\:properties').find('d\\:ProjectUrl[m\\:null*="true"]')[0].attributes[0].value);
+
+var isActive = ( unavail_docs[key] == false ) ? 
+`<a href="https://chrdek.github.io/docs/${$(this).find('m\\:properties').find('d\\:Id').text()}.html" target="_blank" rel="noopener noreferrer" title="Open new tab"><div class="col col-6 status" data-label="Docs"><span class="active">Online</span></div></a>` :
+`<div class="col col-6 status" data-label="Docs"><span class="waiting">Offline</span></div>`;
+
+   htmlPart.push($(`<li class="table-row">
+      <a href="https://www.nuget.org/packages/${$(this).find('m\\:properties').find('d\\:Id').text()}"><div class="col col-1" data-label="Info">🌐 ${$(this).find('m\\:properties').find('d\\:Id').text()}</div></a>
+      <div class="col col-2" data-label="Version">${$(this).find('m\\:properties').find('d\\:Version').text()}</div>
+      <div class="col col-3" data-label="Created">${$(this).find('m\\:properties').find('d\\:Created').text()}</div>
+      <div class="col col-4" data-label="Summary">${$(this).find('m\\:properties').find('d\\:Description').text()}</div>
+      <div class="col col-5" data-label="Downloads">${$(this).find('m\\:properties').find('d\\:DownloadCount').text()}</div>
+      ${isActive}
+    </li>`));
+$('ul').append(htmlPart);
+ });
+ } //xml part render..
+
 },'json');
 
 //General usage page stats - footer section.
