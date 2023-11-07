@@ -130,7 +130,7 @@ $('ul').append(htmlPart);
  } //json part render..
 
 if (wf_response == 'XML') {
-let xmlPackageFeeds = $.parseXML(data); //xml atom-based parsed nuget packages for display.
+let xmlPackageFeeds = $.parseXML(atob(data)); //xml atom-based parsed nuget packages for display.
 let mainXMLFeed = xmlPackageFeeds.documentElement;
 
 let htmlPart = [];
