@@ -48,8 +48,9 @@ var reqVector = [
 
 
 /*** Additional UI elements ***/
-$("#toggle-button1").addClass("active");
+localStorage.clear();
 if (localStorage.getItem("BG") == null || localStorage.getItem("BG") == '') {
+$("#toggle-button1").addClass("active");
 $(".tri-state-toggle-button").click(function(){
   $(".tri-state-toggle-button").removeClass("active");
     var id = $(this).attr('id');
