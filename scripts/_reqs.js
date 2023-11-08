@@ -55,14 +55,17 @@ $(".tri-state-toggle-button").click(function(){
     var id = $(this).attr('id');
 if (id == "toggle-button2") {
 $("body").removeClass();
+$("#toggle-button2").addClass("active"); 
  $("body").fadeIn(980).addClass("grayeffect");
 localStorage.setItem("BG","grayeffect");
 }
 if (id == "toggle-button1") {
+$("#toggle-button1").addClass("active"); 
  $("body").fadeIn(980).removeClass();
 localStorage.setItem("BG","normal");
 }
 if (id == "toggle-button3") {
+$("#toggle-button3").addClass("active"); 
 $("body").removeClass();
  $("body").fadeIn(980).addClass("wavy-bg");
 localStorage.setItem("BG","wavy-bg");
@@ -78,15 +81,18 @@ $(".tri-state-toggle-button").click(function(){
   $(".tri-state-toggle-button").removeClass("active");
     var id = $(this).attr('id');
 if (id == "toggle-button2") {
+$("#toggle-button2").addClass("active"); 
 $("body").removeClass();
  $("body").fadeIn(980).addClass("grayeffect");
 localStorage.setItem("BG","grayeffect");
 }
 if (id == "toggle-button1") {
+$("#toggle-button1").addClass("active"); 
  $("body").fadeIn(980).removeClass();
 localStorage.setItem("BG","normal");
 }
 if (id == "toggle-button3") {
+$("#toggle-button3").addClass("active"); 
 $("body").removeClass();
  $("body").fadeIn(980).addClass("wavy-bg");
 localStorage.setItem("BG","wavy-bg");
