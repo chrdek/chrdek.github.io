@@ -34,7 +34,23 @@
 <link href="./css/tblmain.css" rel="stylesheet" />
 <link href="./css/navmain.css" rel="stylesheet" />
 <title>Hosted Packages Listing</title>
-<script id="script_test"></script>
+<script id="script_test">
+if (localStorage.getItem("BG") != null) {
+ switch (localStorage.getItem("BG")) {
+ case 1: $("body").removeClass();
+break;
+
+ case 2:  $("body").fadeIn(980).addClass("grayeffect");
+break;
+
+ case 3:  $("body").fadeIn(980).addClass("wavy-bg");
+break;
+
+ default: $("body").removeClass();
+break;
+ }
+}
+</script>
 <!--<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>-->
 </head>
 
@@ -115,8 +131,8 @@
 <a href="#">About</a>-->
 </p>
 <p><i>Web content is maintained by github action <a href="https://github.com/marketplace/actions/nuget-api-dataget"> <svg height="10" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="10" data-view-component="true" class="octicon octicon-play mr-1">
-    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z" fill="%fff"></path>
-</svg>nuget-api-dataget</a></i></p>
+    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z" fill="white"></path>
+</svg> &nbsp;nuget-api-dataget</a></i></p>
 </div>
 </footer>
 <!-- Extended Footers End -->

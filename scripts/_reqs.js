@@ -47,21 +47,6 @@ var reqVector = [
 }];
 
 
-if (localStorage.getItem("BG") != null) {
- switch (localStorage.getItem("BG")) {
- case 1: $("body").removeClass();
-break;
-
- case 2:  $("body").fadeIn(980).addClass("grayeffect");
-break;
-
- case 3:  $("body").fadeIn(980).addClass("wavy-bg");
-break;
-
- default: $("body").removeClass();
-break;
- }
-}
 /*** Additional UI elements ***/
 $("#toggle-button1").addClass("active");
 $(".tri-state-toggle-button").click(function(){
