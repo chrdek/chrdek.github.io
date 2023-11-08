@@ -46,10 +46,26 @@ var reqVector = [
     spinner:true,
 }];
 
+function preSelectBg() {
+ switch (localStorage.getItem("BG")) {
+ case "normal": $("#toggle-button1").addClass("active");
+break;
+ case "grayeffect": $("#toggle-button2").addClass("active");
+break;
+ case "wavy-bg": $("#toggle-button3").addClass("active");
+break;
+ default: {$("#toggle-button1").addClass("active");$("#toggle-button2").addClass("active");$("#toggle-button3").addClass("active");} //not possible case, disable all checkboxes.
+break;
+ }
+}
+
+
 
 /*** Additional UI elements ***/
 if (localStorage.getItem("BG") == null || localStorage.getItem("BG") == "") {
-$("#toggle-button1").addClass("active");
+//$("#toggle-button1").addClass("active");
+
+preSelectBg();
 $(".tri-state-toggle-button").click(function(){
   $(".tri-state-toggle-button").removeClass("active");
     var id = $(this).attr('id');
@@ -74,7 +90,9 @@ localStorage.setItem("BG","wavy-bg");
 });
 }
 else {
-$("#toggle-button1").addClass("active");
+//$("#toggle-button1").addClass("active");
+
+preSelectBg();
 $("body").fadeIn(980).addClass(localStorage.getItem("BG"));
 
 $(".tri-state-toggle-button").click(function(){
