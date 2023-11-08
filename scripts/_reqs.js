@@ -64,7 +64,6 @@ $("body").removeClass();
  $("body").fadeIn(980).addClass("wavy-bg");
 }
     $("#" + id).addClass("active");
-  });
 });
 
 
