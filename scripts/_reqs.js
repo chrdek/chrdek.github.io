@@ -48,7 +48,6 @@ var reqVector = [
 
 
 /*** Additional UI elements ***/
-localStorage.clear();
 if (localStorage.getItem("BG") == null || localStorage.getItem("BG") == '') {
 $("#toggle-button1").addClass("active");
 $(".tri-state-toggle-button").click(function(){
@@ -72,6 +71,7 @@ localStorage.setItem("BG","wavy-bg");
 });
 }
 else {
+$("#toggle-button1").addClass("active");
 $("body").fadeIn(980).addClass(localStorage.getItem("BG"));
 }
 /*** PSGallery data section. ***/
