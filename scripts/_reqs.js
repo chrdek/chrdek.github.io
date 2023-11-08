@@ -54,7 +54,7 @@ break;
 break;
  case "wavy-bg": $("#toggle-button3").addClass("active");
 break;
- default: {$("#toggle-button1").addClass("active");$("#toggle-button2").addClass("active");$("#toggle-button3").addClass("active");} //not possible case, disable all checkboxes.
+ default: $("#toggle-button1").addClass("active"); //empty case, select default bg
 break;
  }
 }
