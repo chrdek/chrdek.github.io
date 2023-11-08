@@ -35,21 +35,21 @@
 <link href="./css/navmain.css" rel="stylesheet" />
 <title>Hosted Packages Listing</title>
 <script id="script_test">
-/*if (localStorage.getItem("BG") != null || localStorage.getItem("BG") != '') {
+if (localStorage.getItem("BG") != null || localStorage.getItem("BG") != '') {
  switch (localStorage.getItem("BG")) {
- case 1: $("body").removeClass();
+ case "normal":  {$("body").removeClass(); localStorage.setItem("BG","normal");}
 break;
 
- case 2:  $("body").fadeIn(980).addClass("grayeffect");
+ case "grayeffect":  {$("body").fadeIn(980).addClass("grayeffect"); localStorage.setItem("BG","grayeffect");}
 break;
 
- case 3:  $("body").fadeIn(980).addClass("wavy-bg");
+ case "wavy-bg":  {$("body").fadeIn(980).addClass("wavy-bg"); localStorage.setItem("BG","wavy-bg");}
 break;
 
  default: $("body").removeClass();
 break;
  }
-}*/
+}
 </script>
 <!--<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>-->
 </head>
