@@ -47,7 +47,7 @@ var reqVector = [
 }];
 
 
-if (localStorage.getItem("BG") !== null) {
+if (localStorage.getItem("BG") != null) {
  switch (localStorage.getItem("BG")) {
  case 1: $("body").removeClass();
 break;
