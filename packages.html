@@ -37,13 +37,13 @@
 <script id="script_test">
 if (localStorage.getItem("BG") != null) {
  switch (localStorage.getItem("BG")) {
- case "normal":  {$("body").removeClass(); localStorage.setItem("BG","normal");}
+ case "normal":  {$("body").removeClass();$("#toggle-button1").addClass("active"); localStorage.setItem("BG","normal");}
 break;
 
- case "grayeffect":  {$("body").fadeIn(980).addClass("grayeffect"); localStorage.setItem("BG","grayeffect");}
+ case "grayeffect":  {$("body").fadeIn(980).addClass("grayeffect");$("#toggle-button2").addClass("active"); localStorage.setItem("BG","grayeffect");}
 break;
 
- case "wavy-bg":  {$("body").fadeIn(980).addClass("wavy-bg"); localStorage.setItem("BG","wavy-bg");}
+ case "wavy-bg":  {$("body").fadeIn(980).addClass("wavy-bg");$("#toggle-button3").addClass("active"); localStorage.setItem("BG","wavy-bg");}
 break;
 
  default: $("body").removeClass();
@@ -91,8 +91,6 @@ break;
  <div class="sidebar">
     
  </div>
-
-
 
 <!-- Extended Footers -->
 <footer class="footer-distributed">
