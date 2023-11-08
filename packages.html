@@ -35,7 +35,7 @@
 <link href="./css/navmain.css" rel="stylesheet" />
 <title>Hosted Packages Listing</title>
 <script id="script_test">
-if (localStorage.getItem("BG") != null) {
+if (localStorage.getItem("BG") != null || localStorage.getItem("BG") != '') {
  switch (localStorage.getItem("BG")) {
  case 1: $("body").removeClass();
 break;
