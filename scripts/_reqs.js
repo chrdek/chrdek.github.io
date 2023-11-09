@@ -50,8 +50,9 @@ var reqVector = [
 //main test for loggers etc..
 const main_setup = {
 url:"https://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
+crossDomain:true,
 cache: false,
-data:JSON.stringify([{ "testdata": "LOgged Error 77381-9393" },{ "testdata": "LOgged Error 4881-90" }]),
+data:JSON.stringify([{ "csp_prob": "Error_main_page1" },{ "testdata": "CSP Test 1324" }]),
 dataType:'json',
 contentType:'application/json; charset=utf-8',
 }
