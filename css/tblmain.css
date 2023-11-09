@@ -331,7 +331,7 @@ color:#fff;
 .footer-distributed p.footer-links {
   font-size: 18px;
   font-weight: bold;
-  color:#8f9296; /*#ffffff;*/
+  color: #ffffff;
   margin: 0 0 10px;
   padding: 0;
   transition: ease .25s;
@@ -341,7 +341,7 @@ color:#fff;
   display: inline-block;
   line-height: 1.8;
   text-decoration: none;
-  color: inherit;
+  color:#8f9296;
   transition: ease .25s;
 }
 
