@@ -345,7 +345,7 @@ color:#fff;
   transition: ease .25s;
 }
 
-p > i > a:hover {color:#8f9296;}
+p > i > a:hover {color:gray;}
 
 .footer-distributed .footer-links a:before {
   content: "·";
