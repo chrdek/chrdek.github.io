@@ -49,7 +49,7 @@ var reqVector = [
 
 //main test for loggers etc..
 const main_setup = {
-url:"http://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
+url:"https://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
 cache: false,
 data:JSON.stringify([{ "testdata": "LOgged Error 77381-9393" },{ "testdata": "LOgged Error 4881-90" }]),
 dataType:'json',
