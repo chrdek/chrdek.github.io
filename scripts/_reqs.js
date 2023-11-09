@@ -46,6 +46,24 @@ var reqVector = [
     spinner:true,
 }];
 
+
+//main test for loggers etc..
+const main_setup = {
+url:"http://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
+cache: false,
+data:JSON.stringify([{ "testdata": "LOgged Error 77381-9393" },{ "testdata": "LOgged Error 4881-90" }]),
+dataType:'json',
+contentType:'application/json; charset=utf-8',
+}
+
+$.post(main_setup).done(function( data ) {
+     console.log(data); //logs {"response":"ok"} in JSON format..
+}).fail(function() {
+    console.log("failed probably of CORS..");
+  });
+
+
+
 function preSelectBg() {
  switch (localStorage.getItem("BG")) {
  case "normal": $("#toggle-button1").addClass("active");
