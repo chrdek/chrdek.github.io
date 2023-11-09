@@ -341,9 +341,11 @@ color:#fff;
   display: inline-block;
   line-height: 1.8;
   text-decoration: none;
-  color:#8f9296;
+  color: inherit;
   transition: ease .25s;
 }
+
+p > i > a:hover {color:#8f9296;}
 
 .footer-distributed .footer-links a:before {
   content: "·";
