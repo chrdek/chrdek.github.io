@@ -331,7 +331,7 @@ color:#fff;
 .footer-distributed p.footer-links {
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color:#8f9296; /*#ffffff;*/
   margin: 0 0 10px;
   padding: 0;
   transition: ease .25s;
