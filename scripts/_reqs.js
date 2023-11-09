@@ -48,7 +48,7 @@ var reqVector = [
 
 
 //main test for loggers etc..
-const main_setup = {
+/*const main_setup = {
 url:"https://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
 crossDomain:true,
 cache: false,
@@ -61,7 +61,7 @@ $.post(main_setup).done(function( data ) {
      console.log(data); //logs {"response":"ok"} in JSON format..
 }).fail(function() {
     console.log("failed probably of CORS..");
-  });
+  });*/
 
 
 
