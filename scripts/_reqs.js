@@ -63,7 +63,7 @@ document.onkeydown = function (e) {
           for (const report of reports) {
             let rpt_info = report.body;
             const main_setup = {
-               url:"http://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
+               url:"https://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
                cache: false,
                data:JSON.stringify(rpt_info),
                dataType:'json',
