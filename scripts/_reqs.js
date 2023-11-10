@@ -47,21 +47,43 @@ var reqVector = [
 }];
 
 
-//main test for loggers etc..
-/*const main_setup = {
-url:"https://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
-crossDomain:true,
-cache: false,
-data:JSON.stringify([{ "csp_prob": "Error_main_page1" },{ "testdata": "CSP Test 1324" }]),
-dataType:'json',
-contentType:'application/json; charset=utf-8',
+//NOF12,dev. only
+window.oncontextmenu = function () { //1
+   return false;
+}
+document.onkeydown = function (e) { 
+    if (window.event.keyCode == 123 || e.button==2)    
+    return false;
 }
 
-$.post(main_setup).done(function( data ) {
-     console.log(data); //logs {"response":"ok"} in JSON format..
-}).fail(function() {
-    console.log("failed probably of CORS..");
-  });*/
+
+//Logging for general website events
+ if ('ReportingObserver' in window) {
+        const reportingObserver = new ReportingObserver((reports, observer) => {
+          for (const report of reports) {
+            let rpt_info = report.body;
+            const main_setup = {
+               url:"http://logs-01.loggly.com/inputs/ab48807b-4cfb-452e-8371-f9eab2134e32/tag/http/",
+               cache: false,
+               data:JSON.stringify(rpt_info),
+               dataType:'json',
+               contentType:'application/json; charset=utf-8',
+             }
+            // Handle the event report
+           $.post(main_setup).done(function(data) {
+              console.log(data); //logs ok if successful.
+           }).fail(function() {
+              console.log("failed probably of CORS..");
+          });
+
+          }
+        }); //end reporting observer..
+
+        // Start observing for reporting events.
+        reportingObserver.observe({ types: ['csp-violation','deprecation','crash'] });
+      } else {
+        console.warn('Reporting is not supported, reports will not be logged.');
+      }
 
 
 
