@@ -13,13 +13,13 @@
 
 .sidebar:hover { 
   filter: drop-shadow(0 0 15px #67aa6a);
-  opacity(0.9);
+  opacity:0.9;
   transition: 0.5s;
 }
 
 .sidebar.sm:hover {
   filter: drop-shadow(0 0 15px #67aa6a);
-  opacity:(0.9);
+  opacity:0.9;
   transition: 0.5s;
 }
 
@@ -63,6 +63,6 @@ code, pre {
   border-radius: 5px;
 }
 
-.bottom {
+/*.bottom {
   justify-self: bottom;
-}
+}*/

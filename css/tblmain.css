@@ -94,8 +94,8 @@ hr.green {
   font-size:39px;
   font-family:"fjalla one";
   margin-bottom:0;
-  overflow:none; /*auto*/
-  margin-top:4;
+  /*overflow:none; auto*/
+  margin-top:4px;
   height:100px;
   width:95%;
   font-weight:600;
