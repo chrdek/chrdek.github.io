@@ -13,9 +13,6 @@ return (new DOMParser().parseFromString(textpart,'text/xml').documentElement.que
 : console.warn("DOMContentLoaded XHTML invalid! check file.");
  })(textpart);
 
-});
-
-
 (() => {
 return (new DOMParser().parseFromString(textpart,'text/html').documentElement.querySelector('parsererror')) == undefined 
 ? console.log("DOMContentLoaded produces HTML valid parts.")
