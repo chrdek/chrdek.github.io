@@ -170,7 +170,7 @@ let PSGInfo = $.parseJSON(jsondata);
 $.each(PSGInfo, (key,value) => {
  psgData.push($(`<p><b>${PSGInfo[key].Id}</b></p>
                   <span><b>Type:${PSGInfo[key].ItemType}</b></span>
-                 <p><b>Version:</b>${PSGInfo[key].LatestVersion}</p><a href="https://www.powershellgallery.com${PSGInfo[key].PackageUrl}">hosted on PSGallery..</a>`));
+                 <p><b>Version:</b>${PSGInfo[key].LatestVersion}</p><a href="https://www.powershellgallery.com${PSGInfo[key].PackageUrl}" rel="noreferrer noopener">hosted on PSGallery..</a>`));
   });
 $('div.sidebar').append(psgData);
 },'json');
@@ -191,7 +191,7 @@ $(CanIUseInfo).find('entry').each(function(){
   let linkto_ciuse = $(this).find('link').attr('href');
 
   dataParts.push($(`<p>${entry_title}</p>
-                 <p><a href=${linkto_ciuse}>view on caniuse..</a>`));
+                 <p><a href=${linkto_ciuse} rel="noreferrer noopener">view on caniuse..</a>`));
 });
  $('div.sidebar').append(dataParts);
  });
@@ -230,7 +230,7 @@ var isActive = ( packageInfo[key].verified ) ?
 `<div class="col col-6 status" data-label="Docs"><span class="waiting">Offline</span></div>`;
 
    htmlPart.push($(`<li class="table-row">
-      <a href="https://www.nuget.org/packages/${packageInfo[key].id}"><div class="col col-1" data-label="Info">🌐 ${packageInfo[key].id}</div></a>
+      <a href="https://www.nuget.org/packages/${packageInfo[key].id}" rel="noreferrer noopener"><div class="col col-1" data-label="Info">🌐 ${packageInfo[key].id}</div></a>
       <div class="col col-2" data-label="Version">${packageInfo[key].version}</div>
       <div class="col col-3" data-label="Created">${xml_trans[key].DateCreated}</div>
       <div class="col col-4" data-label="Summary">${packageInfo[key].description}</div>
@@ -267,7 +267,7 @@ var isActive = ( unavail_docs[key] == false ) ?
 `<div class="col col-6 status" data-label="Docs"><span class="waiting">Offline</span></div>`;
 
    htmlPart.push($(`<li class="table-row">
-      <a href="https://www.nuget.org/packages/${$(this).find('m\\:properties').find('d\\:Id').text()}"><div class="col col-1" data-label="Info">🌐 ${$(this).find('m\\:properties').find('d\\:Id').text()}</div></a>
+      <a href="https://www.nuget.org/packages/${$(this).find('m\\:properties').find('d\\:Id').text()}" rel="noreferrer noopener"><div class="col col-1" data-label="Info">🌐 ${$(this).find('m\\:properties').find('d\\:Id').text()}</div></a>
       <div class="col col-2" data-label="Version">${$(this).find('m\\:properties').find('d\\:Version').text()}</div>
       <div class="col col-3" data-label="Created">${$(this).find('m\\:properties').find('d\\:Created').text()}</div>
       <div class="col col-4" data-label="Summary">${$(this).find('m\\:properties').find('d\\:Description').text()}</div>
