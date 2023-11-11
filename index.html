@@ -20,7 +20,7 @@
 <meta name="author" content="chrdek">
 <link rel="base" href="https://chrdek.github.io">
 <link rel="canonical" href="https://chrdek.github.io/">
-<meta rel="sitemap" type="application/xml" content="https://chrdek.github.io/sitemap.xml">
+<meta name="sitemap" content="https://chrdek.github.io/sitemap.xml">
 <meta name="robots" content="index,follow">
 <meta name="googlebot" content="index,follow">
 
@@ -29,8 +29,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- CSS Section, Title Section -->
-<link href="./css/tblmain.css" rel="stylesheet" />
-<link href="./css/navmain.css" rel="stylesheet" />
+<link href="./css/tblmain.css" rel="stylesheet">
+<link href="./css/navmain.css" rel="stylesheet">
 
 <title>About</title>
 <script id="script_test"></script>
@@ -40,12 +40,12 @@
 <!--Navigation bar section start-->
 <nav class="fixed-nav-bar">
   <a class="brand">
-   <img src="./icons8-package-64_2nd.png"/>
+   <img src="./icons8-package-64_2nd.png" alt="notavail.">
   </a>
 
 <!-- MAIN PART OF NAV. BAR -->
   <a class="brand">
-   <img  id="mainTitle" src="./projects_logo2.PNG"/>
+   <img  id="mainTitle" src="./projects_logo2.PNG" alt="notavail.">
   </a>
   <a class="link" href="/index.html">about</a>
   <a class="link" href="/packages.html">hosted packages</a>
@@ -54,16 +54,16 @@
 <!--Navigation bar section end-->
 
 <div class="container">
-<br/>
-<br/>
+<br>
+<br>
   <h2 style="color:#F8F9FD">About</h2>
-<center style="font-size:1.2rem;margin-top:1%">
-Welcome to the main projects page.<br/>
+<div style="font-size:1.2rem;margin-top:1%;text-align:center;">
+Welcome to the main projects page.<br>
 Currently hosting <b><i>2</i></b> packages on nuget.org and 
 <b><i>1</i></b> web3 application on vercel.
-<br/>
+<br>
 <b>Note:</b> This website is just a landing site for my projects listing. Read more about this <a href="https://github.com/chrdek/chrdek.github.io/blob/gh-pages/README.md">here</a>
-</center>
+</div>
 </div>
 <div class="aboutcont"></div>
 
@@ -138,8 +138,8 @@ Currently hosting <b><i>2</i></b> packages on nuget.org and
 </nav>
 <!-- Scripts Section -->
 <script src="./scripts/_meta.js"></script>
-<script id="script_test">
-<!--
+<!--<script id="script_test">
+
 //General usage page stats - footer section.
 var visibleloadingTime = `Page loaded in: ${parseFloat(`${!(window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart)*.0000001}`).toFixed(4)} secs`;
 
@@ -149,6 +149,6 @@ footerInfo.innerHTML = `<small><strong>${visibleloadingTime}</strong></small>`;
 var footerInfo2 = document.querySelector("#loadpage2");
 var dataloadingTime = `Data fetched in: ${parseFloat(0).toFixed(4)} secs`;
 footerInfo2.innerHTML = `<small><strong>${dataloadingTime}</strong></small>`;
--->
-</script>
+
+</script>-->
 </html>
