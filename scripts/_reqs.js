@@ -51,8 +51,8 @@ var reqVector = [
 window.oncontextmenu = function () { //1
    return false;
 }
-document.onkeydown = function (e) { 
-    if (window.event.keyCode == 123 || e.button==2)    
+document.onkeydown = function (e) {  //2
+    if (window.event.keyCode == 123 || e.button==2 || window.event.ctrlKey == true ||window.event.shiftKey == true ||window.event.keyCode == 119 ) 
     return false;
 }
 
