@@ -367,7 +367,7 @@ p > i > a:hover {color:gray;}
 }
 
 .footer-distributed .footer-right a {
-  display: inline-block;
+  display: contents; /*inline-block;*/
   width: 35px;
   height: 35px;
   background-color: #33383b;
