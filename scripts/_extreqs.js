@@ -273,7 +273,8 @@ let pck_created = `${new Date(Number(packageInfo[key].createdAt)).toLocaleDateSt
 let pck_updated = `${new Date(Number(packageInfo[key].updatedAt)).toLocaleDateString('fr-FR')} ${new Date(Number(packageInfo[key].updatedAt)).toLocaleTimeString('fr-FR')}`;
 
    htmlPart.push($(`<li class="table-row">
-      <a href="https://${packageInfo[key].apexName}"><div class="col col-1" data-label="HostedAt">🌐 ${packageInfo[key].apexName}</div></a>
+      <a href="https://${packageInfo[key].apexName}" title="Vercel App Host"><div class="col col-1" data-label="HostedAt">🌐</div></a> | 
+      <a href="https://github.com/chrdek/${packageInfo[key].name.replace(".vercel.app","")}" title="Git Repository Host"><div class="col col-1" data-label="HostedAt">📁</div></a>
       <div class="col col-2" data-label="Created">${pck_created}</div>
       <div class="col col-3" data-label="Name"><b>${packageInfo[key].name.replace(".vercel.app","")}</b></div>
       <div class="col col-4" data-label="ProjectId">${packageInfo[key].projectId.substr(0,4)}***</div>
