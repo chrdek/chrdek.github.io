@@ -30,6 +30,7 @@ index.json
 **/temp
 **/[.]cache[d]
 **/./
+**/*/*.yml
 **/.config/
 **/.azure/
 **/.aws/
