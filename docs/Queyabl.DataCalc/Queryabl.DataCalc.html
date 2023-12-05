@@ -1,0 +1,819 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DataCalc
+ | Package Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DataCalc
+ | Package Documentation ">
+      
+      <link rel="icon" href="../queryabl_datacalc.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="./queryabl_datacalc.png" alt="Queryabl.DataCalc Package">
+                           &nbsp;&nbsp;Queryabl.DataCalc Package
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Queryabl.DataCalc">
+
+
+
+  <h1 id="Queryabl_DataCalc" data-uid="Queryabl.DataCalc" class="text-break">
+    Class DataCalc
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Queryabl.html">Queryabl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Queryabl.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Main class for extended functionality.
+Includes implementation of linq fluent clauses for &quot;Where&quot;, &quot;Select&quot;
+with relevent customizations.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DataCalc</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DataCalc</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Queryabl_DataCalc_CollEvenLength_" data-uid="Queryabl.DataCalc.CollEvenLength*"></a>
+
+  <h3 id="Queryabl_DataCalc_CollEvenLength__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0___" data-uid="Queryabl.DataCalc.CollEvenLength``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})">
+  CollEvenLength&lt;T&gt;(IEnumerable&lt;IEnumerable&lt;T&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves an IEnumerable of generic collections that have an odd/even length
+and uses fluent syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;IEnumerable&lt;T&gt;&gt; CollEvenLength&lt;T&gt;(this IEnumerable&lt;IEnumerable&lt;T&gt;&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</dt>
+    <dd><p>Input data source of IEnumerable of enumerations</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</dt>
+    <dd><p>Filtered IEnumerable list of generic collections of odd or even lengths.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_CollEvenLength__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0____examples">Examples</h4>
+  <p>Filtering of nested lists based on their odd/even size.</p>
+<pre><code class="lang-csharp">var test_list = new  {new List{1,3,4,4},
+new List{43,54,32},
+					  new List{99,10,403,10,20,10},
+					  new List{1},
+					  new List{90,40} }.AsQueryable();
+
+test_list.CollEvenLength(); //returns all lists that have even size.
+test_list.CollEvenLength().Take(1); //returns first list of elements that has even size.
+test_list.CollEvenLength().Take(2));  //retruns two lists of elements that have even size.</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_CollEvenLength_" data-uid="Queryabl.DataCalc.CollEvenLength*"></a>
+
+  <h3 id="Queryabl_DataCalc_CollEvenLength__1_System_Linq_IQueryable_System_Collections_Generic_IEnumerable___0___" data-uid="Queryabl.DataCalc.CollEvenLength``1(System.Linq.IQueryable{System.Collections.Generic.IEnumerable{``0}})">
+  CollEvenLength&lt;T&gt;(IQueryable&lt;IEnumerable&lt;T&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a Queryable of IEnumerable collections that have an odd/even length
+and uses fluent syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryable&lt;IEnumerable&lt;T&gt;&gt; CollEvenLength&lt;T&gt;(this IQueryable&lt;IEnumerable&lt;T&gt;&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</dt>
+    <dd><p>Input data source of IQueryable of enumerations</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</dt>
+    <dd><p>Filtered IQueryable list of generic collections of odd or even lengths.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_CollEvenLength__1_System_Linq_IQueryable_System_Collections_Generic_IEnumerable___0____examples">Examples</h4>
+  <p>Filtering of lists based on their odd/even size.</p>
+<pre><code class="lang-csharp">var test_list = new  {new List{1,3,4,4},
+new List{43,54,32},
+					  new List{99,10,403,10,20,10},
+					  new List{1},
+					  new List{90,40} }.AsQueryable();
+
+test_list.CollEvenLength(); //returns all lists that have even size.
+test_list.CollEvenLength().Take(1); //returns first list of elements that has even size.
+test_list.CollEvenLength().Take(2));  //retruns two lists of elements that have even size.</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_FilterNumerics_" data-uid="Queryabl.DataCalc.FilterNumerics*"></a>
+
+  <h3 id="Queryabl_DataCalc_FilterNumerics__1_System_Collections_Generic_IEnumerable___0__" data-uid="Queryabl.DataCalc.FilterNumerics``1(System.Collections.Generic.IEnumerable{``0})">
+  FilterNumerics&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>NOTE: This is an example of how this should be done if implemented in code using methods (still Where(), Select() can be used).
+Allows for mixed generic enumerated data type filtering,
+retrieves and filters all numerical values only from the generic IEnumerable list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; FilterNumerics&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Input data source of IEnumerable</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Filtered generic IEnumerable list of values</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_FilterNumerics__1_System_Collections_Generic_IEnumerable___0___examples">Examples</h4>
+  <p>Get the numbers from a mixed data type list.</p>
+<pre><code class="lang-csharp">var ienum_mixed = new List{ 103,"vffsd","fmos",new List{"gfdfs","fsd","3489"},9.0,89.3m,99.42m,1,90000000000};
+var ienum_nums = ienum_mixed.FilterNumerics();</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_FilterNumerics_" data-uid="Queryabl.DataCalc.FilterNumerics*"></a>
+
+  <h3 id="Queryabl_DataCalc_FilterNumerics__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__" data-uid="Queryabl.DataCalc.FilterNumerics``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+  FilterNumerics&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>NOTE: This is an example of how this should be done if implemented in code using methods (still Where(), Select() can be used).
+Additional examples displaying extended usage on generic IEnumerables/IQueryables on mixed data types,
+uses anonymous function(s) for filtering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; FilterNumerics&lt;T&gt;(this IEnumerable&lt;T&gt; source, Func&lt;T, bool&gt; predicate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Input data source of IEnumerable</p>
+</dd>
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Anonymous function used as a predicate-based filter</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Filtered generic enumerable list of values</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_FilterNumerics__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean___examples">Examples</h4>
+  <p>Get the numbers from a mixed data type list, simple examples with filters on queryable parts for
+extended numerical filtering on data cleanup operations.
+NOTE: FilterNumerics is used only for removing all non-numerical datatypes at once.</p>
+<pre><code class="lang-csharp">IQueryable alldata = new List { 103, "vffsd", "fmos", new List { "gfdfs", "fsd", "3489" }, 9.0, 89.3m, 99.42m, 1, 90000000000 }.AsQueryable();
+var numericValues = alldata.FilterNumerics();
+//Sample Default Usage - With/Without FilterNumerics()
+// .Where(n =&gt; n is long); //select only long
+// .Where(n =&gt; n.ToString().Length &gt; 10 == true); // select numeric values of prespecified length
+// .Where(n =&gt; n is UInt32); // select only uint
+// .Where(n =&gt; (n is Double) AND ((double)n &gt;= 1)); //select only doubles 'AND' should be replaced with appropriate sign</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_FreqObjsOccur_" data-uid="Queryabl.DataCalc.FreqObjsOccur*"></a>
+
+  <h3 id="Queryabl_DataCalc_FreqObjsOccur__1_System_Linq_IQueryable___0__" data-uid="Queryabl.DataCalc.FreqObjsOccur``1(System.Linq.IQueryable{``0})">
+  FreqObjsOccur&lt;T&gt;(IQueryable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a Queryable listing of the top most frequently occuring objects in the
+IQueryable input source of object type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryable&lt;T&gt; FreqObjsOccur&lt;T&gt;(this IQueryable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;T&gt;</dt>
+    <dd><p>Input data source of IQueryable of generic enumerations</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;T&gt;</dt>
+    <dd><p>Filtered IQueryable list of the most frequently occuring objects of types T - Can return multiple types of objects.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_FreqObjsOccur__1_System_Linq_IQueryable___0___examples">Examples</h4>
+  <p>Retrieval of all most frequently occuring objects in the input IQueryable of objects type.
+Multiple return types included in the results.
+NOTE: Prespecified class definitions for tests provided at 'code' section.</p>
+<pre><code class="lang-csharp">public class Person { public string name = ""; public string surname = ""; public int age = 0; public Person(string n, string sn) { this.name = n; this.surname = sn; } }
+public class Animal { public string species = ""; public Animal(string spec) { this.species = spec; } }
+public class Dog { public string name = ""; public Dog(string n) { this.name = n; } }
+
+var per1 = new Person("john", "six");
+var anim3 = new Animal("Reptile");
+var anim2 = new Animal("canine");
+var anim1 = new Animal("feline");
+var dog1 = new Dog("spok");
+var per2 = new Person("john", "1");
+var dog2 = new Dog("tim");
+var per3 = new Person("john", "test");
+
+IQueryable Freq1 = new List { "gtes", 11, 15, 15, anim3, anim2, dog2, dog2, dog2, dog2, dog1, per4, per4, per1, per2, per3, 190, 190, 190, "vdvd", "3489" }.AsQueryable();
+
+ Freq1.FreqObjsOccur(); //example for return types of T = Object</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_FreqOccur_" data-uid="Queryabl.DataCalc.FreqOccur*"></a>
+
+  <h3 id="Queryabl_DataCalc_FreqOccur__1_System_Linq_IQueryable___0__" data-uid="Queryabl.DataCalc.FreqOccur``1(System.Linq.IQueryable{``0})">
+  FreqOccur&lt;T&gt;(IQueryable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the most frequently occuring object in the
+IQueryable input source of object type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FreqOccur&lt;T&gt;(this IQueryable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;T&gt;</dt>
+    <dd><p>Input data source of IQueryable of generic enumerations</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The single most frequently-occuring object of type T</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_FreqOccur__1_System_Linq_IQueryable___0___examples">Examples</h4>
+  <p>Retrieval of the most frequently occuring value of either int/string other from IQueryable.
+NOTE: Prespecified class definitions for tests provided at 'code' section.</p>
+<pre><code class="lang-csharp">public class Person { public string name = ""; public string surname = ""; public int age = 0; public Person(string n, string sn) { this.name = n; this.surname = sn; } }
+public class Animal { public string species = ""; public Animal(string spec) { this.species = spec; } }
+public class Dog { public string name = ""; public Dog(string n) { this.name = n; } }
+
+var per1 = new Person("john", "six");
+var anim3 = new Animal("Reptile");
+var anim2 = new Animal("canine");
+var anim1 = new Animal("feline");
+var dog1 = new Dog("spok");
+var per2 = new Person("john", "1");
+var dog2 = new Dog("tim");
+var per3 = new Person("john", "test");
+
+IQueryable testFreqOcc = new List{1,5,5,6,7,7,7,7,72,2,1,4,6,11,11,11,11,11,88,88,7,34,43,5,88,61,14,23,11,100}.AsQueryable();
+IQueryable freqSeq2 = new List { "gg", "4334", "4334", "4554", "gg", "gg", "gg", "9000" }.AsQueryable();
+IQueryable Freq1 = new List { "gtes", 11, 15, 15, anim3, anim2, dog2, dog2, dog2, dog2, dog1, per4, per4, per1, per2, per3, 190, 190, 190, "vdvd", "3489" }.AsQueryable();
+
+ testFreqOcc.FreqOccur(); //example for return types of T = int
+ freqSeq2.FreqOccur(); //example for return types of T = string
+ Freq1.FreqOccur(); //example for return types of T = Object</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_SelectIntMatrix_" data-uid="Queryabl.DataCalc.SelectIntMatrix*"></a>
+
+  <h3 id="Queryabl_DataCalc_SelectIntMatrix_System_Linq_IQueryable_System_String__System_Func_System_String_System_Boolean____" data-uid="Queryabl.DataCalc.SelectIntMatrix(System.Linq.IQueryable{System.String},System.Func{System.String,System.Boolean}[])">
+  SelectIntMatrix(IQueryable&lt;string&gt;, params Func&lt;string, bool&gt;[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a filtered IQueryable list of integer matrices,
+based on their corresponding filtering condition of the anonymous function as parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryable&lt;int[,]&gt; SelectIntMatrix(this IQueryable&lt;string&gt; source, params Func&lt;string, bool&gt;[] conditions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Input data source IQueryable of Large strings of Numerical values</p>
+</dd>
+    <dt><code>conditions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;[]</dt>
+    <dd><p>Anonymous function used for conditional predicate selections for retrieving IQueryable of transformed 2-dim matrices</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[,]&gt;</dt>
+    <dd><p>Filtered IQueryable list of integer matrices transformed based on the conditional predicate of the anonymous parameter function as an input</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_SelectIntMatrix_System_Linq_IQueryable_System_String__System_Func_System_String_System_Boolean_____examples">Examples</h4>
+  <p>Retrieval cases for filtered/transformed input strings that require also data input cleanup.
+NOTE: WILL THROW a System.OutofMemoryException for 2-Dim matrix values of sizes 1000x1000.
+Output matrices accomodate string representation of numeric integer values of up to 1M of digits with no issues.
+Larger values of above 1M require more detailed testing.</p>
+<pre><code class="lang-csharp">IQueryable BigNumStrs = new List { null, "", "0", "1", "0", "99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004411111111111111111111111111111111111111111111111111111555555555555555555555555444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)", "99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)", "999999990000000000000000000000000000000000000000", "ABD34783489BSNCI328932902309239032092390320dnsjiansiNDUsA9802398nfuiwn3e80c9unu2289cn2", "2962728abcs1119__1", null, "89348934988324934438492", "547849823200%$9232", string.Empty, "$7823934222220.00943", @"99999999999\99999.999999\.999" }.AsQueryable();
+IQueryable BigNumStrsAdded = new List { null, "111133354421999999990111110434341113443492-0323--0222999", "999000===493", "84848349349999hsus29229cusudshu0992", "34r4f3f3f3343", }.AsQueryable();
+IQueryable BigNumStrs2 = new List { null, "9999999900", "4389433493", "34r4f3f3f3343", "   83483943fd43f_0f34043f0)/__f34/" }.AsQueryable();
+IQueryable NullSeq = new List { null, null, "", string.Empty, "  334", "b  889 //" }.AsQueryable();
+var EmptySetNullChecks = null ?? new List { }.AsQueryable(); 
+
+BigNumStrs.SelectIntMatrix(n =&gt; n.Length &gt; 3422 || n.Length != 2232); // will return all that match string size of above 3422 as a 1-dim array and everything that is of string size 2232 as a 2-dim one.
+BigNumStrs.SelectIntMatrix(); // wille return all input string-based integer representation as 2-dim arrays in an IQueryable.
+BigNumStrsAdded.SelectIntMatrix(n =&gt; n.Length == 900); // will return all predicate conditional matches as a 1-dim array if not matched returns  a 2-dim one.
+BigNumStrsAdded.SelectIntMatrix(n =&gt; n.Length != 9000); //will return all predicate conditional matches as a 1-dim array if not matched returns  a 2-dim one.
+
+EmptySetNullChecks .SelectIntMatrix() //Result N/A, will throw an exception if left with no null default.</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_SelectIntMatrix_" data-uid="Queryabl.DataCalc.SelectIntMatrix*"></a>
+
+  <h3 id="Queryabl_DataCalc_SelectIntMatrix_System_Linq_IQueryable_System_String__System_Int32_" data-uid="Queryabl.DataCalc.SelectIntMatrix(System.Linq.IQueryable{System.String},System.Int32)">
+  SelectIntMatrix(IQueryable&lt;string&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a filtered IQueryable list of integer matrices such that their total dimensions equals to
+the maximum string length of defaultLen that is prespecified as input parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryable&lt;int[,]&gt; SelectIntMatrix(this IQueryable&lt;string&gt; source, int defaultLen = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Input data source IQueryable of Large strings of Numerical values</p>
+</dd>
+    <dt><code>defaultLen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum used length of the string to be output as an integer matrix
+Notes:
+- Defaults to value of zero if none specified as an argument and outputs unfiltered list of transformed strings to matrices.
+- When a value above 900 is specified, strings are transformed to 1 dimensional arrays.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[,]&gt;</dt>
+    <dd><p>Filtered IQueryable list of integer matrices based on their string input value counterparts of length = defaultLen</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_SelectIntMatrix_System_Linq_IQueryable_System_String__System_Int32__examples">Examples</h4>
+  <p>Retrieval cases for filtered/transformed input strings that require also data input cleanup.
+NOTE: WILL THROW a System.OutofMemoryException for 2-Dim matrix values of sizes 1000x1000.
+Output matrices accomodate string representation of numeric integer values of up to 1M of digits with no issues.
+Larger values of above 1M require more detailed testing.</p>
+<pre><code class="lang-csharp">IQueryable BigNumStrs = new List { null, "", "0", "1", "0", "99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004411111111111111111111111111111111111111111111111111111555555555555555555555555444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)", "99999999004444444444444444444444444444444444444444444499999999000007777777777777777777777777777777777000000000000000009999999900000iiiiiiiiiii20202282828991111000009999888888888888888888888888888888888888888888888888888888888uu929192919uuuu00000000000013131313444(*)444_(*)", "999999990000000000000000000000000000000000000000", "ABD34783489BSNCI328932902309239032092390320dnsjiansiNDUsA9802398nfuiwn3e80c9unu2289cn2", "2962728abcs1119__1", null, "89348934988324934438492", "547849823200%$9232", string.Empty, "$7823934222220.00943", @"99999999999\99999.999999\.999" }.AsQueryable();
+IQueryable BigNumStrsAdded = new List { null, "111133354421999999990111110434341113443492-0323--0222999", "999000===493", "84848349349999hsus29229cusudshu0992", "34r4f3f3f3343", }.AsQueryable();
+IQueryable BigNumStrs2 = new List { null, "9999999900", "4389433493", "34r4f3f3f3343", "   83483943fd43f_0f34043f0)/__f34/" }.AsQueryable();
+IQueryable NullSeq = new List { null, null, "", string.Empty, "  334", "b  889 //" }.AsQueryable();
+var EmptySetNullChecks = null ?? new List { }.AsQueryable(); 
+
+BigNumStrs.SelectIntMatrix(); //return all input string-based integer representation as 2-dimensional arrays in an IQueryable.
+BigNumStrsAdded.SelectIntMatrix(2232); // return the input string-based integer representation of specified length as a 1-dimensional array.
+BigNumStrsAdded.SelectIntMatrix(237); //return the input string-based integer representation of specified length as a 2-dimensional array.
+EmptySetNullChecks .SelectIntMatrix(); //Result N/A, will throw an exception if left with no null default.</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_Select_" data-uid="Queryabl.DataCalc.Select*"></a>
+
+  <h3 id="Queryabl_DataCalc_Select__2_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0___1___" data-uid="Queryabl.DataCalc.Select``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+  Select&lt;TSource, T&gt;(IQueryable&lt;TSource&gt;, Expression&lt;Func&lt;TSource, T&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Source Implementation for custom &quot;Select()&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryable&lt;TSource&gt; Select&lt;TSource, T&gt;(this IQueryable&lt;TSource&gt; source, Expression&lt;Func&lt;TSource, T&gt;&gt; predicate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;TSource&gt;</dt>
+    <dd></dd>
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, T&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;TSource&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd></dd>
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_WhereDist_" data-uid="Queryabl.DataCalc.WhereDist*"></a>
+
+  <h3 id="Queryabl_DataCalc_WhereDist__1_System_Linq_IQueryable_System_String__System_String_System_Int32_" data-uid="Queryabl.DataCalc.WhereDist``1(System.Linq.IQueryable{System.String},System.String,System.Int32)">
+  WhereDist&lt;T&gt;(IQueryable&lt;string&gt;, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a Queryable of string based on IEnumerable of string data types that equal
+to a current hamming value of N and input type str2 that are checked against.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryable&lt;string&gt; WhereDist&lt;T&gt;(this IQueryable&lt;string&gt; str1, string str2, int distCheck)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>str1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The leftmost string part to compare with</p>
+</dd>
+    <dt><code>str2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The rightmost string part to compare against</p>
+</dd>
+    <dt><code>distCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The hamming value to check per string comparison</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Filtered IQueryable list of generic strings with same resulting hamming comparison value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Queryabl_DataCalc_WhereDist__1_System_Linq_IQueryable_System_String__System_String_System_Int32__examples">Examples</h4>
+  <p>Filtering per string and hamming code comparison part.</p>
+<pre><code class="lang-csharp">IQueryable hamCheckStr = new List{"test1","test2","test3","test2","10times49","20times46","times"}.AsQueryable();
+var sourceStrings = new List { "abc", "def", "xyz" }.AsQueryable();
+
+sourceStrings.WhereDist("abg",1);
+sourceStrings.WhereDist("aee",2);
+hamCheckStr.WhereDist("test3",1); // all return the appropriate filtered queryable search results.</code></pre>
+
+
+
+
+
+
+  <a id="Queryabl_DataCalc_Where_" data-uid="Queryabl.DataCalc.Where*"></a>
+
+  <h3 id="Queryabl_DataCalc_Where__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___" data-uid="Queryabl.DataCalc.Where``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+  Where&lt;TSource&gt;(IQueryable&lt;TSource&gt;, Expression&lt;Func&lt;TSource, bool&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Source Implementation for custom &quot;Where()&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryable&lt;TSource&gt; Where&lt;TSource&gt;(this IQueryable&lt;TSource&gt; source, Expression&lt;Func&lt;TSource, bool&gt;&gt; predicate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;TSource&gt;</dt>
+    <dd></dd>
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;TSource&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><a class='xref external' href='https://www.nuget.org/packages/Queryabl.DataCalc/' target='_blank' rel='noopener noreferrer nofollow'>NuGet Package @ v1.0.3.21</a></i> - <strong>Generated by DocFX</strong>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

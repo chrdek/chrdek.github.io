@@ -1,0 +1,15 @@
+{
+  "Queryabl": "Queryabl.yml",
+  "Queryabl.DataCalc": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.CollEvenLength``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.CollEvenLength``1(System.Linq.IQueryable{System.Collections.Generic.IEnumerable{``0}})": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.FilterNumerics``1(System.Collections.Generic.IEnumerable{``0})": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.FilterNumerics``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.FreqObjsOccur``1(System.Linq.IQueryable{``0})": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.FreqOccur``1(System.Linq.IQueryable{``0})": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.SelectIntMatrix(System.Linq.IQueryable{System.String},System.Func{System.String,System.Boolean}[])": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.SelectIntMatrix(System.Linq.IQueryable{System.String},System.Int32)": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.Select``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.WhereDist``1(System.Linq.IQueryable{System.String},System.String,System.Int32)": "Queryabl.DataCalc.yml",
+  "Queryabl.DataCalc.Where``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})": "Queryabl.DataCalc.yml"
+}
