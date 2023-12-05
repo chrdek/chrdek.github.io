@@ -49,7 +49,7 @@
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="#">
             <img id="logo" class="svg" src="./queryabl_datacalc.png" alt="Queryabl.DataCalc Package">
-                           Queryabl.DataCalc Package
+                        Queryabl.DataCalc Package
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -692,8 +692,8 @@ EmptySetNullChecks .SelectIntMatrix(); //Result N/A, will throw an exception if 
 
   <a id="Queryabl_DataCalc_WhereDist_" data-uid="Queryabl.DataCalc.WhereDist*"></a>
 
-  <h3 id="Queryabl_DataCalc_WhereDist__1_System_Linq_IQueryable_System_String__System_String_System_Int32_" data-uid="Queryabl.DataCalc.WhereDist``1(System.Linq.IQueryable{System.String},System.String,System.Int32)">
-  WhereDist&lt;T&gt;(IQueryable&lt;string&gt;, string, int)
+  <h3 id="Queryabl_DataCalc_WhereDist_System_Linq_IQueryable_System_String__System_String_System_Int32_" data-uid="Queryabl.DataCalc.WhereDist(System.Linq.IQueryable{System.String},System.String,System.Int32)">
+  WhereDist(IQueryable&lt;string&gt;, string, int)
   
   </h3>
 
@@ -703,7 +703,7 @@ to a current hamming value of N and input type str2 that are checked against.</p
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQueryable&lt;string&gt; WhereDist&lt;T&gt;(this IQueryable&lt;string&gt; str1, string str2, int distCheck)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IQueryable&lt;string&gt; WhereDist(this IQueryable&lt;string&gt; str1, string str2, int distCheck)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -726,17 +726,12 @@ to a current hamming value of N and input type str2 that are checked against.</p
 </dd>
   </dl>
 
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd></dd>
-  </dl>
 
 
 
 
 
-  <h4 class="section" id="Queryabl_DataCalc_WhereDist__1_System_Linq_IQueryable_System_String__System_String_System_Int32__examples">Examples</h4>
+  <h4 class="section" id="Queryabl_DataCalc_WhereDist_System_Linq_IQueryable_System_String__System_String_System_Int32__examples">Examples</h4>
   <p>Filtering per string and hamming code comparison part.</p>
 <pre><code class="lang-csharp">IQueryable hamCheckStr = new List{"test1","test2","test3","test2","10times49","20times46","times"}.AsQueryable();
 var sourceStrings = new List { "abc", "def", "xyz" }.AsQueryable();
