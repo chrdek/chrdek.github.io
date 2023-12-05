@@ -256,7 +256,7 @@ footerInfo3.innerHTML = `<small><strong>${datasrcType}</strong></small>`;
 $.each( packageInfo, (key, value) => {
 
 packageInfo[1].verified = true; //make doc active online for specified package.
-
+//packageInfo[2].verified = true;
 var isActive = ( packageInfo[key].verified ) ? 
 `<a href="https://chrdek.github.io/docs/${packageInfo[key].id}/${packageInfo[key].id}.html" target="_blank" rel="noopener noreferrer" title="Open new tab"><div class="col col-6 status" data-label="Docs"><span class="active">Online</span></div></a>` :
 `<div class="col col-6 status" data-label="Docs"><span class="waiting">Offline</span></div>`;
