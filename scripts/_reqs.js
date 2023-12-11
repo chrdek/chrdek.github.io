@@ -258,7 +258,7 @@ $.each( packageInfo, (key, value) => {
 packageInfo[1].verified = true; //make doc active online for specified package.
 packageInfo[2].verified = true;
 if (xml_trans[key] === undefined) {
-xml_trans[key]['DateCreated'] = new Date().toISOString();
+xml_trans[key] || xml_trans.push({DateCreated:(new Date().toISOString())});
 }
 var isActive = ( packageInfo[key].verified ) ? 
 `<a href="https://chrdek.github.io/docs/${packageInfo[key].id}/${packageInfo[key].id}.html" target="_blank" rel="noopener noreferrer" title="Open new tab"><div class="col col-6 status" data-label="Docs"><span class="active">Online</span></div></a>` :
