@@ -257,7 +257,7 @@ $.each( packageInfo, (key, value) => {
 
 packageInfo[1].verified = true; //make doc active online for specified package.
 packageInfo[2].verified = true;
-if (xml_trans[key].DateCreated === undefined) {
+if (xml_trans[key] === undefined) {
 xml_trans[key].DateCreated || {}; xml_trans[key].DateCreated = new Date().toISOString();
 }
 var isActive = ( packageInfo[key].verified ) ? 
