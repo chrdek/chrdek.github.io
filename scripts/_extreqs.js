@@ -248,7 +248,7 @@ sessionStorage.clear();
 //Total Duration of request.
 var totalDuration = parseFloat(((new Date().getTime()-getStart)*.001).toString()).toFixed(4);
 
-$.get('https://api.vercel.com/v9/projects/bmac-de-fi/domains/bmac-de-fi.vercel.app').done(function(data) {
+$.get('https://api.vercel.com/v9/projects/bmac-de-fi-d2tm/domains/bmac-de-fi.vercel.app').done(function(data) {
 
 //Data source definit. section..
 var wf_response = isXmlorJs(data);
