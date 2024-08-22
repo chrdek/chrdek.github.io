@@ -10,6 +10,8 @@ This is created solely for maintaining various projects/apps -and their document
 
 Entire website has __been setup in a hurry using only plain-text editor__ (notepad) and will be further improved in the near future with more projects and content to come..
 
+Adding on-going support for other partial maintenance of website + added features on main site (date/time - other).
+
 -----
 <br/>
 
