@@ -125,6 +125,45 @@ h2 small {
   font-size: 0.5em;
 }
 
+
+.scrollpanel {
+      max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+    /* display: flex;*/
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.scrollpanel ul {
+    overflow-x:hidden;
+    overflow-y: scroll; 
+    border-radius:0.222rem;
+    border-top: 2px 3px 7px rgba(56, 54, 54, 0.69);
+    box-shadow: 2px 3px 7px rgba(56, 54, 54, 0.69);
+    max-height:390px;
+   -ms-overflow-style: none;
+}
+
+
+  ul::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  ul::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  ul::-webkit-scrollbar-thumb {
+    background-color: rgba(135, 60, 255, 0.35);
+    border-radius: 0.6rem;
+    border: 3px solid rgba(135, 63, 255, 0.35);
+  }
+
+
 .responsive-table li {
   border-radius: 8px;
   padding: 55px 60px;
@@ -185,6 +224,52 @@ h2 small {
     text-align: right;
   }
 }
+
+
+/***      Collapsible section START     ***/
+input {
+  display: none;
+  visibility: hidden;
+}
+label {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  //color: #666;
+}
+label:hover {
+  color: #000;
+}
+label::before {
+  font-family: Consolas, monaco, monospace;
+  font-weight: bold;
+  font-size: 15px;
+  content: "+";
+  vertical-align: text-top;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+}
+#expand {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s; /* https://codepen.io/peternguyen/pen/KKgQpm */
+}
+section {
+  padding: 0 20px;
+  text-align:center;
+}
+#toggle:checked ~ #expand {
+  height: 450px;
+}
+#toggle:checked ~ label::before {
+  content: "-";
+}
+
+/***      Collapsible section END      ***/
 
 
 /*Note: Some Information remains hidden when on smaller devices */
