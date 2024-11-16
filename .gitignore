@@ -1,6 +1,8 @@
 *.asc
 *.[cd]er[t]
 *.crt
+*.ps1
+*.bat
 *.pem
 *.gpg
 *.p7c
