@@ -138,11 +138,12 @@ h2 small {
     width: 100%;
 }
 
+/* rgba(56, 54, 54, 0.69);*/
 .scrollpanel ul {
     overflow-x:hidden;
     overflow-y: scroll; 
     border-radius:0.222rem;
-    border-top: 2px 3px 7px rgba(56, 54, 54, 0.69);
+    border-top: 2px 3px 7px;
     box-shadow: 2px 3px 7px rgba(56, 54, 54, 0.69);
     max-height:390px;
    -ms-overflow-style: none;
@@ -235,8 +236,7 @@ label {
   display: block;
   padding: 0.5em;
   text-align: center;
-  border-bottom: 1px solid #CCC;
-  //color: #666;
+  border-bottom: 1px solid #CCC; /* color: #666; */
 }
 label:hover {
   color: #000;
