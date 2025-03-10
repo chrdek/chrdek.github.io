@@ -34,8 +34,8 @@ $(document).ready(function() {
 
 const url_entries = new Map([
                             [0,"3c76ba350bf9635c6277e5eee8819a8a/"], //ciu xml atom feeds
-                            [1,"6c7a4b53475444374b4557584d4e5075/"], //json retrieval feeds
-                            [2,"7a39377470574132516d5668636d567949413d3d/"]
+                            [1,"376d4a723443345a4b576e37774d3064/"], //json retrieval feeds
+                            [2,"42416e6861447556516d5668636d567949413d3d/"]
                             ]);
 
 const retFullUrl = (byKey) => `https://gist.githubusercontent.com/chrdek/${url_entries.get(byKey)}/raw/`
